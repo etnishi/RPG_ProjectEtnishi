@@ -1,5 +1,9 @@
 {
   "resources": [
+    {"id":{"name":"RoomStarter_obj","path":"objects/RoomStarter_obj/RoomStarter_obj.yy",},"order":0,},
+    {"id":{"name":"Battle_Entity_Super_obj","path":"objects/Battle_Entity_Super_obj/Battle_Entity_Super_obj.yy",},"order":0,},
+    {"id":{"name":"Entity_Attack_Super_obj","path":"objects/Entity_Attack_Super_obj/Entity_Attack_Super_obj.yy",},"order":1,},
+    {"id":{"name":"BattleController_obj","path":"objects/BattleController_obj/BattleController_obj.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
@@ -33,6 +37,7 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":13,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Battle_Entities.yy","order":2,"resourceVersion":"1.0","name":"Battle_Entities","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

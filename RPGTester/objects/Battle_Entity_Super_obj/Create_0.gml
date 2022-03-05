@@ -3,6 +3,9 @@
 
 Side = false
 
+target = 0
+selectSkill = 0 
+
 MHP = 100
 CHP = MHP
 MMP = 100
@@ -41,3 +44,5 @@ PostTurn = []	// skills that activate after player has taken turn
 Active = []		// skills available to choose from during turn [0 , 1, 2, 3]
 
 Reactive = []	// iterate through when hit by attack
+
+controlType = ""

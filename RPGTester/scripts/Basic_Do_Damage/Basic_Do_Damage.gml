@@ -25,4 +25,13 @@ function Basic_Do_Damage(tIns, sIns){
 	}else{
 		show_debug_message("Missed")
 	}
+	instance_destroy()
+}
+
+function setup_Basic_Do_Damage(){
+	//30, [1,1,1,0,1,1], 0, true, Basic_Do_Damage
+	Base = 30 
+	DAM = [1,0,0,0,0,0]
+	AccuracyMod = 0
+	Actions = [Basic_Do_Damage]
 }

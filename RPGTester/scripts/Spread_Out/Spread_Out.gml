@@ -16,6 +16,7 @@ function Spread_Out(tIns, sIns){
 			}
 		}
 	}
+	instance_destroy()
 }
 
 function Clone_and_Set(targ, elec){
@@ -29,4 +30,12 @@ function Clone_and_Set(targ, elec){
 		ins.DAM[4]	= 0		// Magic
 		ins.DAM[5]	= 0		// unblockable (rare)
 	}
+}
+
+function setup_Spread_Out(){
+	//30, [1,0,0,0,0,0], 0, true, Spread_Out
+	Base = 30 
+	DAM = [1,0,0,0,0,0]
+	AccuracyMod = 0
+	Actions = [Spread_Out]
 }

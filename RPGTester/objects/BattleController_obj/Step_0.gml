@@ -12,31 +12,31 @@ if(init){
 	OrderTeamBySpd(allies)
 	OrderTeamBySpd(enemies)
 }else{
-	
-	if(curSide){
-		if(curTurn < array_length(allies)){
-			if(allies[curTurn].controlType != ""){
-				allies[curTurn].controlType()
+	if(!instance_exists(Entity_Attack_Super_obj)){
+		if(curSide){
+			if(curTurn < array_length(allies)){
+				if(allies[curTurn].controlType != ""){
+					allies[curTurn].controlType()
+				}else{
+					curTurn ++
+				}
 			}else{
-				curTurn ++
+				show_debug_message("Switch sides")
+				curTurn = 0
+				curSide = !curSide
 			}
 		}else{
-			show_debug_message("Switch sides")
-			curTurn = 0
-			curSide = !curSide
-		}
-	}else{
-		if(curTurn < array_length(enemies)){
-			if(enemies[curTurn].controlType != ""){
-				enemies[curTurn].controlType()
+			if(curTurn < array_length(enemies)){
+				if(enemies[curTurn].controlType != ""){
+					enemies[curTurn].controlType()
+				}else{
+					curTurn ++
+				}
 			}else{
-				curTurn ++
+				show_debug_message("Back to Player/ally")
+				curTurn = 0
+				curSide = !curSide
 			}
-		}else{
-			show_debug_message("Back to Player/ally")
-			curTurn = 0
-			curSide = !curSide
 		}
 	}
-	
 }

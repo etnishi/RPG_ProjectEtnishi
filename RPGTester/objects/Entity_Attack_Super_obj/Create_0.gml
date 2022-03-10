@@ -1,9 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+Name = ""
+
+Desc = ""
+
+movSpd = 10
+
 firstStep = true
 
-TTL = 1200
+TTL = 500
 
 target = ""
 

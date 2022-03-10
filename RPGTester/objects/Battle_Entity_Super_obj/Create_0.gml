@@ -8,6 +8,8 @@ targetSide = !Side
 selectSkill = 0 
 selectLevel = 0
 
+insName = "TESTER_DAN"
+
 MHP = 100
 CHP = MHP
 MMP = 100
@@ -46,8 +48,9 @@ PreTurn = []	// skills that activate when turn starts
 PostTurn = []	// skills that activate after player has taken turn
 
 Active = []		// skills available to choose from during turn [0 , 1, 2, 3]
-Active[0] = ["description", 30, [], 0, Basic_Do_Damage]
-Active[1] = ["description", 30, [1,0,0,1,0,0], 0, Spread_Out]
+Active[0] = ["Name", "description", setup_Basic_Do_Damage]
+Active[1] = ["Name", "description", setup_Spread_Out]
+Active[2] = ["Name", "description", setup_Do_Nothing]
 
 Reactive = []	// iterate through when hit by attack
 

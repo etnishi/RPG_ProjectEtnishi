@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+firstStep = true
+
 TTL = 1200
 
 target = ""
@@ -8,6 +10,7 @@ target = ""
 Side = false	// if true on player side else enemy side
 
 source = ""
+spread = false
 
 // base damage potency value
 Base = 10

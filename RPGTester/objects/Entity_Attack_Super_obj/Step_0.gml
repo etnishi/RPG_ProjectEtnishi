@@ -1,20 +1,31 @@
 /// @description Insert description here
 // You can write your code in this editor
-TTL --
+
+if(firstStep){
+	Base = Actions[1]
+	if(array_length(Actions[2]) > 0){
+		DAM = Actions[2]
+	}
+	AccuracyMod = Actions[3]
+}
+
+TTL --	// this will destroy the instance after X steps just incase it gets stuck somehow
 
 var ins = instance_place(x, y, Battle_Entity_Super_obj)
 
 if(ins == target){// collision with intended target
 	
-	if(source != ""){//attacker(skill val + AccuracyMod + RandVal - 10)
+	if(!spread){
 		
-		if(DAM[3] > 0){
-			for(var i = 0; i < array_length(Actions); i ++){
-				Actions[i](ins)
-			}
+		for(var i = 4; i < array_length(Actions); i ++){
+			if(Actions[i] != "")
+				Actions[i](ins, source)
+		}
+		if(DAM[3] > 0 and (!array_contains(Actions, Spread_Out))){
+			Spread_Out(ins, source)
 		}
 	}else if(DAM[3] > 0){
-		Basic_Do_Damage(ins)
+		Basic_Do_Damage(ins, false)
 	}
 	instance_destroy()
 }

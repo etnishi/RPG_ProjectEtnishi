@@ -16,3 +16,5 @@ turnCount = 0
 canRun = true
 
 init = true
+
+// draw variables

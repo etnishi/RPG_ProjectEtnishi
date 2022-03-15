@@ -9,7 +9,7 @@ movSpd = 10
 
 firstStep = true
 
-TTL = 500
+TTL = 100
 
 target = ""
 

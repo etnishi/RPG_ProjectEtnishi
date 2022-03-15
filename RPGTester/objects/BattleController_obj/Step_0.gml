@@ -20,9 +20,10 @@ if(init){
 				}else{
 					curTurn ++
 				}
-			}else{
+			}else{// switch from ally to enemy
 				show_debug_message("Switch sides")
 				curTurn = 0
+				turnCount ++
 				curSide = !curSide
 			}
 		}else{
@@ -32,9 +33,10 @@ if(init){
 				}else{
 					curTurn ++
 				}
-			}else{
+			}else{// switch from enemy to ally
 				show_debug_message("Back to Player/ally")
 				curTurn = 0
+				turnCount ++
 				curSide = !curSide
 			}
 		}

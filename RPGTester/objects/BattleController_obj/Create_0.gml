@@ -17,4 +17,6 @@ canRun = true
 
 init = true
 
+global.timeStop = false
+
 // draw variables

@@ -2,6 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Player_Control(){
 	
+	if(firstStep){
+		firstStep = false
+		// run all pre turn scripts
+		for(var i = 0; i < array_length(PreTurn); i ++){
+			PreTurn[i]()
+		}
+	}
+	
 	if(keyboard_check_pressed(vk_shift)){
 		selectLevel = 0
 		subSelect = 0
@@ -60,7 +68,12 @@ function Player_Control(){
 			
 			targetSide = !Side
 			selectLevel = 0
+			// run all post scripts
+			for(var i = 0; i < array_length(PostTurn); i ++){
+				PostTurn[i]()
+			}
 			BattleController_obj.curTurn ++
+			firstStep = true
 		}
 	}
 	
@@ -72,6 +85,7 @@ function Player_Control(){
 		show_debug_message("sub Select " + string(subSelect))
 		show_debug_message("selectSkill " + string(selectSkill))
 		show_debug_message("target " + string(target))
+		show_debug_message("cur health " + string(CHP))
 		show_debug_message("---------")
 	}
 	

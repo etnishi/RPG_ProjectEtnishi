@@ -3,6 +3,8 @@
 
 event_inherited()
 
+insName = "Player_Bob"
+
 controlType = Player_Control
 
 Side = true

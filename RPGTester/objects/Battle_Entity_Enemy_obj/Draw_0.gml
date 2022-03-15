@@ -11,3 +11,5 @@ if(selectLevel > 0){
 		draw_sprite(TargetArrow_spr, 0, BattleController_obj.enemies[target].x, BattleController_obj.enemies[target].y - 42)
 	}
 }
+
+event_inherited()

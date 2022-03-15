@@ -13,14 +13,12 @@ function Basic_Do_Damage(tIns, sIns){
 				totDamage += (Base * DAM[i]) * ((sIns.MAG) / (1 + tIns.DEF * tIns.RES[i]))
 			}
 		}
-		
-		for(var i = 0; i < array_length(tIns.Reactive); i ++){
-			totDamage += tIns.Reactive[i](self)
-		}
+		totDamage = Deal_Damage(tIns, totDamage)
+		tIns.TargetHP -= totDamage
 		show_debug_message("---Attack Damage---")
-		show_debug_message("Total Damage " + string(totDamage))
-		tIns.CHP -= totDamage
-		show_debug_message("Cur Health " + string(tIns.CHP))
+		show_debug_message(sIns.insName + " uses " + Name)
+		show_debug_message(tIns.insName + " takes " + string(totDamage) + " Damage")
+		//show_debug_message(tIns.insName + " has " + string(tIns.TargetHP))
 		show_debug_message("-------------------")
 	}else{
 		show_debug_message("Missed")
@@ -32,6 +30,6 @@ function setup_Basic_Do_Damage(){
 	//30, [1,1,1,0,1,1], 0, true, Basic_Do_Damage
 	Base = 30 
 	DAM = [1,0,0,0,0,0]
-	AccuracyMod = 0
+	AccuracyMod = 10
 	Actions = [Basic_Do_Damage]
 }

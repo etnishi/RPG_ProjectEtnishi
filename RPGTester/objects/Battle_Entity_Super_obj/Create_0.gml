@@ -1,19 +1,24 @@
-/// @description Insert description here
+/// @description Creation script for the Battle Entity super object
 // You can write your code in this editor
 
 Side = false
+
+initStep = true
+
+firstStep = true
 
 target = 0
 targetSide = !Side
 selectSkill = 0 
 selectLevel = 0
 
-insName = "TESTER_DAN"
+insName = "TESTER_DAN" // instance name. This is shown in notification box
 
-MHP = 100
-CHP = MHP
-MMP = 100
-CMP = MMP
+MHP = 100		// max health points
+CHP = MHP		// current health points
+TargetHP = MHP	// target HP. this is the target that HP will drop / rise too
+MMP = 100		// max magic points
+CMP = MMP		// current magic points
 
 // attribute stats
 ATK = 40	// modifyer used against the base physical damage of an attack
@@ -24,8 +29,7 @@ SKL = 40	// used to determine whether an attack hits (attack)
 SPD = 40	// determines turn order
 LCK = 40	// effects critical hits
 
-RES = []
-// resistance stats 
+RES = []	// resistance stats 
 // these are multiplied against the DEF modifier 
 RES[0]	= 1		// Physical will usually be 1
 RES[1]	= 0.5	// Thermal,		damage over time
@@ -44,16 +48,23 @@ Status[4] = 0	// down,	can't act until healed, if all members are down battle en
 // status effect resistance is determined by LCK stat
 
 PreTurn = []	// skills that activate when turn starts
+				// this is where buff effects are applied
 
 PostTurn = []	// skills that activate after player has taken turn
+				// TBD
 
-Active = []		// skills available to choose from during turn [0 , 1, 2, 3]
-Active[0] = ["Name", "description", setup_Basic_Do_Damage]
-Active[1] = ["Name", "description", setup_Spread_Out]
-Active[2] = ["Name", "description", setup_Do_Nothing]
+Active = []		// skills available to choose from during turn. [0 , 1, 2, 3]
+Active[0] = ["Basic attack", "Hit one enemy", setup_Basic_Do_Damage]
+Active[1] = ["Spread attack", "Hits all enemies", setup_Spread_Out]
+Active[2] = ["Nothing", insName + " does nothing (Not for player use)", setup_Do_Nothing]
 
-Reactive = []	// iterate through when hit by attack
+Reactive = [Endure]	// iterate through when hit by attack
 
+Other = []		// activates according to specific conditions. similar to reactive.
+/* 
+ex. time stop, countdown 
+could have an attack come out after X seconds regardless of turn.
+*/
 controlType = ""// script that runs during turn. determines action taken. 
 /*
 control type ideas

@@ -23,7 +23,6 @@ function Basic_Do_Damage(tIns, sIns){
 	}else{
 		array_push(BattleController_obj.notificationLines, "Missed")
 	}
-	instance_destroy()
 }
 
 function setup_Basic_Do_Damage(){

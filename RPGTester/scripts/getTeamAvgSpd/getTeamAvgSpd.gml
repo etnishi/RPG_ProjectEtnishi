@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function getTeamAvgSpd(team){
+	// finds the average speed of a battle entity team
 	var out = 0
 	for(var i = 0; i < array_length(team); i ++){
 		out += team[i].SPD

@@ -3,7 +3,7 @@
 
 draw_self()
 
-if(selectLevel > 0){
+if(selectLevel > 0){// draws target marker
 	
 	if(targetSide){
 		draw_sprite(TargetArrow_spr, 0, BattleController_obj.allies[target].x, BattleController_obj.allies[target].y - 42)
@@ -12,7 +12,7 @@ if(selectLevel > 0){
 	}
 }
 
-if(!initStep){
+if(!initStep){// not implemented
 	
 }
 

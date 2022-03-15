@@ -4,7 +4,7 @@
 if(firstStep){// initialize attribute variables 
 	Name = Actions[0]
 	Desc = Actions[1]
-	Actions[2]()
+	Actions[2]()	// setup script
 	firstStep = false
 }
 
@@ -19,19 +19,22 @@ if(ins == target){// collision with intended target
 		
 		for(var i = 0; i < array_length(Actions); i ++){
 			if(Actions[i] != "")
-				Actions[i](ins, source)
+				Actions[i](ins, source)// iterates through all actions in Actions array
 		}
 		if(DAM[3] > 0 and (!array_contains(Actions, Spread_Out))){
-			Spread_Out(ins, source)
+			Spread_Out(ins, source)// built in spread that is caused bu electric elemental damage
 		}
 	}else{
-		Basic_Do_Damage(ins, source)
+		Basic_Do_Damage(ins, source)// damage from spread 
 	}
+	instance_destroy()
 }
 
-if(target != "")
+if(target != "")// movement towards target
 	move_towards_point(target.x + (target.sprite_width / 2), target.y + (target.sprite_height / 2), movSpd)
+// todo: once there are animations, can time travel time to animation 
 
-if(TTL == 0){
+
+if(TTL == 0){// destroys the instance after a countdown
 	instance_destroy()
 }

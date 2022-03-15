@@ -6,12 +6,13 @@ function Endure(trg, total){
 	// total total damage
 	show_debug_message("Endure script started for " + string(trg.insName))
 	
+	// if has more than one HP survive with one HP if takes mortal damage 
 	if((trg.TargetHP - total) < 1 and trg.TargetHP > 1){
 		total = trg.TargetHP - 1
 		array_push(BattleController_obj.notificationLines, trg.insName + " Endured the hit")
 	}
 	if(total > 0)
 		return floor(total)
-	else
-		return 0
+	else// handles if somehow damage is 0 
+		return 0// may not be needed...
 }

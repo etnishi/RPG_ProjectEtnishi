@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Player_Control(){
 	
-	if(firstStep){
+	if(firstStep){// all control scripts will have a variation of this block
 		firstStep = false
 		array_push(BattleController_obj.notificationLines, insName + " turn")
 		// run all pre turn scripts
@@ -11,20 +11,20 @@ function Player_Control(){
 		}
 	}
 	
-	if(keyboard_check_pressed(vk_shift)){
+	if(keyboard_check_pressed(vk_shift)){// cancels current selection
 		selectLevel = 0
 		subSelect = 0
 		selectSkill = 0
 	}
 	
 	if(keyboard_check_pressed(ord("D"))){
-		if(selectLevel > 0){
+		if(selectLevel > 0){// select through targets
 			if(target < Arr_Length_Side(targetSide)){
 				target ++
 			}else{
 				target = 0
 			}
-		}else{
+		}else{// select through actions
 			if(selectSkill < (array_length(Active) - 1)){
 				selectSkill ++
 			}else{
@@ -34,13 +34,13 @@ function Player_Control(){
 	}
 	
 	if(keyboard_check_pressed(ord("A"))){
-		if(selectLevel > 0){
+		if(selectLevel > 0){// select through targets
 			if(target > 0){
 				target --
 			}else{
 				target = Arr_Length_Side(targetSide)
 			}
-		}else{
+		}else{// select through actions
 			if(selectSkill > 0 ){
 				selectSkill --
 			}else{
@@ -50,29 +50,30 @@ function Player_Control(){
 	}
 	
 	if(keyboard_check_pressed(ord("W"))){
-		
+		// todo: show more information?
 	}
 	
 	if(keyboard_check_pressed(ord("S"))){
-		
+		// swap target side?
 	}
 	
 	if(keyboard_check_pressed(vk_space)){// confirm action
 		selectLevel ++
-		if(selectLevel > 1){
+		if(selectLevel > 1){// after secondary confirmation
 			show_debug_message("Player Control Space")
-			if(targetSide){
+			if(targetSide){// creates attack instance from action array against selected target
 				Create_Basic_Attack(BattleController_obj.allies[target], Active[selectSkill])
 			}else{
 				Create_Basic_Attack(BattleController_obj.enemies[target], Active[selectSkill])
 			}
 			
-			targetSide = !Side
+			targetSide = !Side // resets target side to default
 			selectLevel = 0
 			// run all post scripts
 			for(var i = 0; i < array_length(PostTurn); i ++){
 				PostTurn[i]()
 			}
+			// iterate to next turn in battle controller
 			BattleController_obj.curTurn ++
 			firstStep = true
 		}

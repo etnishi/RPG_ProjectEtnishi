@@ -21,7 +21,6 @@ function Spread_Out(tIns, sIns){
 	}else{
 		array_push(BattleController_obj.notificationLines, "Missed")
 	}
-	instance_destroy()
 }
 
 function Clone_and_Set(targ, elec){

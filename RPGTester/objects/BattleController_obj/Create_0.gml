@@ -19,4 +19,7 @@ init = true
 
 global.timeStop = false
 
-// draw variables
+// notification variables
+
+notificationLines = ["Battle Start"]
+

@@ -8,7 +8,7 @@ function Endure(trg, total){
 	
 	if((trg.TargetHP - total) < 1 and trg.TargetHP > 1){
 		total = trg.TargetHP - 1
-		show_debug_message("Endured")
+		array_push(BattleController_obj.notificationLines, trg.insName + " Endured the hit")
 	}
 	if(total > 0)
 		return floor(total)

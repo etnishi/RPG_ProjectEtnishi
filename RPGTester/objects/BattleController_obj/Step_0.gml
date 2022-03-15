@@ -22,6 +22,7 @@ if(init){
 				}
 			}else{// switch from ally to enemy
 				show_debug_message("Switch sides")
+				array_push(BattleController_obj.notificationLines, "Enemy Side")
 				curTurn = 0
 				turnCount ++
 				curSide = !curSide
@@ -35,10 +36,14 @@ if(init){
 				}
 			}else{// switch from enemy to ally
 				show_debug_message("Back to Player/ally")
+				array_push(BattleController_obj.notificationLines, "Player Side")
 				curTurn = 0
 				turnCount ++
 				curSide = !curSide
 			}
 		}
 	}
+	
+	
+	
 }

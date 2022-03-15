@@ -3,18 +3,23 @@
 // This script is run either wneh the attack array contains the Spread out script or the attack has a non 0
 
 function Spread_Out(tIns, sIns){
-	if(tIns.Side){
-		for(var i = 0; i < array_length(BattleController_obj.allies); i ++){
-			if(BattleController_obj.allies[i] != self.id){
-				Clone_and_Set(BattleController_obj.allies[i], sIns)
+	
+	if((sIns.SKL + AccuracyMod + RandVal - 10) > tIns.AGI){
+		if(tIns.Side){
+			for(var i = 0; i < array_length(BattleController_obj.allies); i ++){
+				if(BattleController_obj.allies[i] != self.id){
+					Clone_and_Set(BattleController_obj.allies[i], sIns)
+				}
+			}
+		}else{
+			for(var i = 0; i < array_length(BattleController_obj.enemies); i ++){
+				if(BattleController_obj.enemies[i] != self.id){
+					Clone_and_Set(BattleController_obj.enemies[i], sIns)
+				}
 			}
 		}
 	}else{
-		for(var i = 0; i < array_length(BattleController_obj.enemies); i ++){
-			if(BattleController_obj.enemies[i] != self.id){
-				Clone_and_Set(BattleController_obj.enemies[i], sIns)
-			}
-		}
+		array_push(BattleController_obj.notificationLines, "Missed")
 	}
 	instance_destroy()
 }

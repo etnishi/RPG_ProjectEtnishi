@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Do_Nothing(tIns, sIns){
-	show_debug_message(string(Desc))
+	array_push(BattleController_obj.notificationLines, string(Desc))
 }
 
 function setup_Do_Nothing(){
@@ -12,5 +12,5 @@ function setup_Do_Nothing(){
 	Actions = []
 	movSpd = 0
 	TTL = 80
-	show_debug_message(string(Desc))
+	array_push(BattleController_obj.notificationLines, string(Desc))
 }

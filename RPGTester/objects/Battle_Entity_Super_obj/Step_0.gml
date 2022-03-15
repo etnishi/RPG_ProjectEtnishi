@@ -6,6 +6,7 @@ if(initStep){// setup instance stats from array set in creation step
 	
 }
 
+
 for(var i = 0; i < array_length(Other); i ++){	// handles contextual Other skills 
 	Other[i]()									// will have unique conditions that activate them.
 }

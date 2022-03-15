@@ -4,6 +4,7 @@ function Player_Control(){
 	
 	if(firstStep){
 		firstStep = false
+		array_push(BattleController_obj.notificationLines, insName + " turn")
 		// run all pre turn scripts
 		for(var i = 0; i < array_length(PreTurn); i ++){
 			PreTurn[i]()

@@ -4,6 +4,7 @@
 // This script calculates whether the attack hits the enemy and the amount of damage dealt.
 
 function Basic_Do_Damage(tIns, sIns){
+	array_push(BattleController_obj.notificationLines, sIns.insName + " uses " + Name)
 	if((sIns.SKL + AccuracyMod + RandVal - 10) > tIns.AGI){
 		var totDamage = 0
 		for(var i = 0; i < 6; i ++){
@@ -13,15 +14,14 @@ function Basic_Do_Damage(tIns, sIns){
 				totDamage += (Base * DAM[i]) * ((sIns.MAG) / (1 + tIns.DEF * tIns.RES[i]))
 			}
 		}
-		totDamage = Deal_Damage(tIns, totDamage)
+		totDamage = Deal_Damage(tIns, totDamage) // applies reactive effects
 		tIns.TargetHP -= totDamage
 		show_debug_message("---Attack Damage---")
-		show_debug_message(sIns.insName + " uses " + Name)
-		show_debug_message(tIns.insName + " takes " + string(totDamage) + " Damage")
+		//tIns.insName + " takes " + string(totDamage) + " Damage")
 		//show_debug_message(tIns.insName + " has " + string(tIns.TargetHP))
 		show_debug_message("-------------------")
 	}else{
-		show_debug_message("Missed")
+		array_push(BattleController_obj.notificationLines, "Missed")
 	}
 	instance_destroy()
 }
@@ -30,6 +30,6 @@ function setup_Basic_Do_Damage(){
 	//30, [1,1,1,0,1,1], 0, true, Basic_Do_Damage
 	Base = 30 
 	DAM = [1,0,0,0,0,0]
-	AccuracyMod = 10
+	AccuracyMod = 20
 	Actions = [Basic_Do_Damage]
 }

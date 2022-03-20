@@ -4,7 +4,7 @@
 // This script calculates whether the attack hits the enemy and the amount of damage dealt.
 
 function Basic_Do_Damage(tIns, sIns){
-	array_push(BattleController_obj.notificationLines, sIns.insName + " uses " + Name)
+	//array_push(BattleController_obj.notificationLines, sIns.insName + " uses " + Name)
 	if((sIns.SKL + AccuracyMod + RandVal - 10) > tIns.AGI){
 		var totDamage = 0
 		for(var i = 0; i < 6; i ++){

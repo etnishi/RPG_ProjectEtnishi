@@ -16,7 +16,7 @@ if(ins == target){// collision with intended target
 	
 	//show_debug_message("Instance target is " + string(ins) + " from " + string(source) + ". ID is " + string(self.id))
 	if(!spread){
-		
+		array_push(BattleController_obj.notificationLines, source.insName + " uses " + Name)
 		for(var i = 0; i < array_length(Actions); i ++){
 			if(Actions[i] != "")
 				Actions[i](ins, source)// iterates through all actions in Actions array

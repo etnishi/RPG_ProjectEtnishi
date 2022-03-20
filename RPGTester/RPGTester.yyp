@@ -23,6 +23,7 @@
     {"id":{"name":"OrderTeamBySpd","path":"scripts/OrderTeamBySpd/OrderTeamBySpd.yy",},"order":2,},
     {"id":{"name":"BattleController_obj","path":"objects/BattleController_obj/BattleController_obj.yy",},"order":3,},
     {"id":{"name":"Arr_Length_Side","path":"scripts/Arr_Length_Side/Arr_Length_Side.yy",},"order":5,},
+    {"id":{"name":"Pre_Post","path":"scripts/Pre_Post/Pre_Post.yy",},"order":2,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [

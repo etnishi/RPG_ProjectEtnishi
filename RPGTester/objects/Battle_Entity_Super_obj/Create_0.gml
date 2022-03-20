@@ -20,14 +20,22 @@ TargetHP = MHP	// target HP. this is the target that HP will drop / rise too
 MMP = 100		// max magic points
 CMP = MMP		// current magic points
 
+// base attribute stats
+BATK = 40	// modifyer used against the base physical damage of an attack
+BDEF = 40	// deffence modifier used with resistances
+BMAG = 40	// modifyer used against the base non physical damage of an attack
+BAGI = 40	// used to determine whether an attack hits (defence)
+BSKL = 40	// used to determine whether an attack hits (attack)
+BSPD = 40	// determines turn order
+BLCK = 40	// effects critical hits
 // attribute stats
-ATK = 40	// modifyer used against the base physical damage of an attack
-DEF = 40	// deffence modifier used with resistances
-MAG = 40	// modifyer used against the base non physical damage of an attack
-AGI = 40	// used to determine whether an attack hits (defence)
-SKL = 40	// used to determine whether an attack hits (attack)
-SPD = 40	// determines turn order
-LCK = 40	// effects critical hits
+ATK = BATK	// modifyer used against the base physical damage of an attack
+DEF = BDEF	// deffence modifier used with resistances
+MAG = BMAG	// modifyer used against the base non physical damage of an attack
+AGI = BAGI	// used to determine whether an attack hits (defence)
+SKL = BSKL	// used to determine whether an attack hits (attack)
+SPD = BSPD	// determines turn order
+LCK = BLCK	// effects critical hits
 
 RES = []	// resistance stats 
 // these are multiplied against the DEF modifier 

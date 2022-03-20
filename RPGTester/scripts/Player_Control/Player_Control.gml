@@ -2,15 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Player_Control(){
 	
-	if(firstStep){// all control scripts will have a variation of this block
-		firstStep = false
-		array_push(BattleController_obj.notificationLines, insName + " turn")
-		// run all pre turn scripts
-		for(var i = 0; i < array_length(PreTurn); i ++){
-			PreTurn[i]()
-		}
-	}
-	
 	if(keyboard_check_pressed(vk_shift)){// cancels current selection
 		selectLevel = 0
 		subSelect = 0
@@ -70,9 +61,7 @@ function Player_Control(){
 			targetSide = !Side // resets target side to default
 			selectLevel = 0
 			// run all post scripts
-			for(var i = 0; i < array_length(PostTurn); i ++){
-				PostTurn[i]()
-			}
+			Post_Script()
 			// iterate to next turn in battle controller
 			BattleController_obj.curTurn ++
 			firstStep = true

@@ -10,7 +10,7 @@ function Controller_PostTurn(){
 	}
 	if(down == array_length(enemies)){
 		done = true
-		winner = 0
+		winner = 1
 	}else{
 		down = 0
 		for(var i = 0; i < array_length(allies); i ++){
@@ -20,7 +20,7 @@ function Controller_PostTurn(){
 		}
 		if(down == array_length(allies)){
 			done = true
-			winner = 1
+			winner = 0
 		}else{
 			done = false
 		}

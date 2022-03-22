@@ -73,12 +73,28 @@ if(init){
 				}
 			}
 		}
+		if(winner != -1)
+			done = true
 	}else{// battle over
+		while(instance_exists(Entity_Attack_Super_obj)){
+			instance_destroy(Entity_Attack_Super_obj)
+		}
 		if(winner == 0){
 			// loss
+			for(var i = 0; i < array_length(allies); i ++){
+				instance_destroy(allies[i])
+			}
+			allies = []
 		}else if(winner == 1){
 			// win
+			for(var i = 0; i < array_length(enemies); i ++){
+				instance_destroy(enemies[i])
+			}
+			enemies = []
+		}else{
+			// other
 			
 		}
+		show_debug_message("Battle over")
 	}
 }

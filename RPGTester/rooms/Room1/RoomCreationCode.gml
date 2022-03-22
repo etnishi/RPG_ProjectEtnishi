@@ -2,6 +2,9 @@
 var ins = instance_create_layer(0, 0, "Instances", BattleController_obj)
 var ins2 = instance_create_layer(200, 100, "Instances", Battle_Entity_Player_obj)
 ins2.SPD = 50
+ins2.Active = [["Basic attack", "Hit one enemy", setup_Basic_Do_Damage],
+				["Spread attack", "Hits all enemies", setup_Spread_Out],
+				["20 hit", "20 hits", setup_Rapid_20]]
 ins.allies = [ins2]
 ins2 = instance_create_layer(200, 100, "Instances", Battle_Entity_Player_obj)
 ins2.SPD = 50

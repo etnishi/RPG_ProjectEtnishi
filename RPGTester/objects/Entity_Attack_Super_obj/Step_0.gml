@@ -4,8 +4,8 @@
 if(firstStep){// initialize attribute variables 
 	Name = Actions[0]
 	Desc = Actions[1]
-	Actions[2]()	// setup script
 	firstStep = false
+	Actions[2]()	// setup script
 }
 
 TTL --	// this will destroy the instance after X steps just incase it gets stuck somehow
@@ -16,7 +16,8 @@ if(ins == target){// collision with intended target
 	
 	//show_debug_message("Instance target is " + string(ins) + " from " + string(source) + ". ID is " + string(self.id))
 	if(!spread){
-		array_push(BattleController_obj.notificationLines, source.insName + " uses " + Name)
+		if(Name != "")
+			array_push(BattleController_obj.notificationLines, source.insName + " uses " + Name)
 		for(var i = 0; i < array_length(Actions); i ++){
 			if(Actions[i] != "")
 				Actions[i](ins, source)// iterates through all actions in Actions array

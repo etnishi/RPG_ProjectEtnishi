@@ -49,10 +49,13 @@ RES[5]	= 0		// Unblockable this stat will always be 0
 
 Status = []		// turn cooldown for status effects if value is -1 then is immune to effect
 Status[0] = 0	// stagger, stats decreased for X turns
-Status[1] = 0	// stunned, can't act for X turns
+Status[1] = 0	// stunned, may not act for X turns
 Status[2] = 0	// Fire,	taking damage each turn
-Status[3] = 0	// sleep,	can't act for X turns, also counts as down. (temporary down)
+Status[3] = 0	// stop,	can't act for X turns, also counts as down. (temporary down)
 Status[4] = 0	// down,	can't act until healed, if all members are down battle ends.(Can not be -1)
+Status[5] = 0	// 
+Status[6] = 0	// 
+Status[7] = 0	// 
 // status effect resistance is determined by LCK stat
 
 PreTurn = []	// skills that activate when turn starts

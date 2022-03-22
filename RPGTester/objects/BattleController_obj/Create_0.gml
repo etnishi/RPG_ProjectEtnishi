@@ -7,6 +7,9 @@ allies = []
 
 curSide = false // it true is allies else enemies
 
+done = false	// whether the battle is over
+winner = -1		// 0 is enemy 1 is ally
+
 curTurn = 0
 
 environment = ""

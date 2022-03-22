@@ -5,7 +5,10 @@
 
 function Basic_Do_Damage(tIns, sIns){
 	//array_push(BattleController_obj.notificationLines, sIns.insName + " uses " + Name)
-	if((sIns.SKL + AccuracyMod + RandVal - 10) > tIns.AGI){
+	var hit = (sIns.SKL + AccuracyMod + RandVal - 10)
+	show_debug_message(string(hit))
+	show_debug_message(string(tIns.AGI))
+	if(hit > tIns.AGI){
 		var totDamage = 0
 		for(var i = 0; i < 6; i ++){
 			if(i == 0){

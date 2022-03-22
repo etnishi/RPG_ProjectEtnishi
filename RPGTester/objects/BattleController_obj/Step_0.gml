@@ -29,48 +29,56 @@ if(init){
 		enemies[i].y = yoff / 2
 	}
 }else{
-	if(!instance_exists(Entity_Attack_Super_obj)){
-		if(curSide){
-			if(curTurn < array_length(allies)){
-				if(allies[curTurn].controlType != ""){
-					with(allies[curTurn]){
-						Pre_Script()
-						if((Status[3] == 0) and (Status[4] == 0))
-							controlType()	// ally control script
-						else
-							BattleController_obj.curTurn ++
+	if(!done){
+		if(!instance_exists(Entity_Attack_Super_obj)){
+			if(curSide){
+				if(curTurn < array_length(allies)){
+					if(allies[curTurn].controlType != ""){
+						with(allies[curTurn]){
+							Pre_Script()
+							if((Status[3] == 0) and (Status[4] == 0))
+								controlType()	// ally control script
+							else
+								BattleController_obj.curTurn ++
+						}
+					}else{
+						curTurn ++
 					}
-				}else{
-					curTurn ++
+				}else{// switch from ally to enemy
+					show_debug_message("Switch sides")
+					array_push(BattleController_obj.notificationLines, "Enemy Side")
+					curTurn = 0
+					turnCount ++
+					curSide = !curSide
 				}
-			}else{// switch from ally to enemy
-				show_debug_message("Switch sides")
-				array_push(BattleController_obj.notificationLines, "Enemy Side")
-				curTurn = 0
-				turnCount ++
-				curSide = !curSide
-			}
-		}else{
-			if(curTurn < array_length(enemies)){
-				if(enemies[curTurn].controlType != ""){
-					with(enemies[curTurn]){
-						Pre_Script()
-						if((Status[3] == 0) and (Status[4] == 0))
-							controlType()	// enemy control script
-						else
-							BattleController_obj.curTurn ++
+			}else{
+				if(curTurn < array_length(enemies)){
+					if(enemies[curTurn].controlType != ""){
+						with(enemies[curTurn]){
+							Pre_Script()
+							if((Status[3] == 0) and (Status[4] == 0))
+								controlType()	// enemy control script
+							else
+								BattleController_obj.curTurn ++
+						}
+					}else{
+						curTurn ++
 					}
-				}else{
-					curTurn ++
+				}else{// switch from enemy to ally
+					show_debug_message("Back to Player/ally")
+					array_push(BattleController_obj.notificationLines, "Player Side")
+					curTurn = 0
+					turnCount ++
+					curSide = !curSide
 				}
-			}else{// switch from enemy to ally
-				show_debug_message("Back to Player/ally")
-				array_push(BattleController_obj.notificationLines, "Player Side")
-				curTurn = 0
-				turnCount ++
-				curSide = !curSide
 			}
 		}
+	}else{// battle over
+		if(winner == 0){
+			// loss
+		}else if(winner == 1){
+			// win
+			
+		}
 	}
-	
 }

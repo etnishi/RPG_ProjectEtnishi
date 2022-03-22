@@ -21,12 +21,16 @@ function Pre_Script(){
 		Status[0] = 0	// stagger, stats decreased for X turns
 		Status[1] = 0	// stunned, may not act for X turns
 		Status[2] = 0	// Fire,	taking damage each turn
-		Status[3] = 0	// sleep,	can't act for X turns, also counts as down. (temporary down)
+		Status[3] = 0	// stop,	can't act for X turns, also counts as down. (temporary down)
 		Status[4] = 0	// down,	can't act until healed, if all members are down battle ends.(Can not be -1)
+		Status[5] = 0	// 
+		Status[6] = 0	// 
+		Status[7] = 0	// 
 		*/
-		if(Status[0] > 0){// lowers accuracy and dodge rate
-			AGI = AGI / 2
-			SKL = SKL / 2
+		if(Status[0] > 0){// lowers stats
+			ATK = ATK / 2
+			DEF = DEF / 2
+			MAG = MAG / 2
 			SPD = SPD / 2
 			Status[0] --
 		}

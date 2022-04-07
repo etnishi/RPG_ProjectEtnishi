@@ -7,13 +7,13 @@ function setup_Basic_Rapid_Damage(){
 	Actions = [Basic_Do_Damage]
 }
 
-function setup_Rapid_5(){
+function setup_Rapid_20(){
 	var ins = instance_create_layer(x,y, "Attack_Layer",Entity_Attack_Spawner_obj)
 	ins.source = source
 	ins.target = target
 	ins.Actions = ["", "", setup_Basic_Rapid_Damage]
 	ins.Side = Side
-	ins.shotCount = 5
+	ins.shotCount = 20
 	ins.randTarg = true
 	instance_destroy()
 	// spawn X hit spawner

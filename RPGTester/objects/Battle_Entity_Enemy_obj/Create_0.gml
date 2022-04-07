@@ -9,4 +9,3 @@ Side = false// false is enemy side
 
 targetSide = !Side
 
-lootDrops = []

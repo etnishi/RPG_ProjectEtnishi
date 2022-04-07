@@ -28,23 +28,6 @@ if(init){
 		enemies[i].x = xoff + (i * sep) - xoffE
 		enemies[i].y = yoff / 2
 	}
-	if(ds_exists(global.indexes[0], ds_type_list)){
-		ds_list_destroy(global.indexes[0])
-	}
-	if(ds_exists(global.indexes[1], ds_type_list)){
-		ds_list_destroy(global.indexes[1])
-	}
-	
-	global.indexes[0] = ds_list_create()
-	for(var i = 0; i < array_length(allies); i ++){
-		ds_list_add(global.indexes[0], i)
-	}
-	
-	global.indexes[1] = ds_list_create()
-	for(var i = 0; i < array_length(enemies); i ++){
-		ds_list_add(global.indexes[1], i)
-	}
-	
 }else{
 	if(!done){
 		if(!instance_exists(Entity_Attack_Super_obj)){
@@ -55,13 +38,8 @@ if(init){
 							Pre_Script()
 							if((Status[3] == 0) and (Status[4] == 0))
 								controlType()	// ally control script
-							else{
-								var dind = ds_list_find_index(global.indexes[0], BattleController_obj.curTurn)
-								if(dind != -1){
-									ds_list_delete(global.indexes[0], BattleController_obj.curTurn)
-								}
+							else
 								BattleController_obj.curTurn ++
-							}
 						}
 					}else{
 						curTurn ++
@@ -80,13 +58,8 @@ if(init){
 							Pre_Script()
 							if((Status[3] == 0) and (Status[4] == 0))
 								controlType()	// enemy control script
-							else{
-								var dind = ds_list_find_index(global.indexes[1], BattleController_obj.curTurn)
-								if(dind != -1){
-									ds_list_delete(global.indexes[1], BattleController_obj.curTurn)
-								}
+							else
 								BattleController_obj.curTurn ++
-							}
 						}
 					}else{
 						curTurn ++
@@ -100,7 +73,6 @@ if(init){
 				}
 			}
 		}
-		Controller_PostTurn()
 		if(winner != -1)
 			done = true
 	}else{// battle over
@@ -116,25 +88,13 @@ if(init){
 		}else if(winner == 1){
 			// win
 			for(var i = 0; i < array_length(enemies); i ++){
-				for(var k = 0; k < array_length(enemies[i].lootDrops);k ++){
-					array_push(lootTable, enemies[i].lootDrops[k])
-				}
 				instance_destroy(enemies[i])
 			}
 			enemies = []
-			var lootRoll = irandom_range(1, 100)
-			for(var i = 0; i < array_length(lootTable); i ++){
-				if(lootRoll <= lootTable[i][0]){
-					// got item
-					array_push(reward, lootTable[i][1])
-				}
-			}
 		}else{
 			// other
 			
 		}
-		
 		show_debug_message("Battle over")
-		
 	}
 }

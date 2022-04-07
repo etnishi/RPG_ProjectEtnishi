@@ -8,6 +8,7 @@ if(firstStep){// initialize attribute variables
 	Actions[2]()	// setup script
 }
 
+TTL --	// this will destroy the instance after X steps just incase it gets stuck somehow
 
 var ins = instance_place(x, y, Battle_Entity_Super_obj)
 
@@ -34,11 +35,7 @@ if(target != "")// movement towards target
 	move_towards_point(target.x + (target.sprite_width / 2), target.y + (target.sprite_height / 2), movSpd)
 // todo: once there are animations, can time travel time to animation 
 
-if(!global.timeStop){
-	TTL --	// this will destroy the instance after X steps just incase it gets stuck somehow
-}else{
-	speed = 0
-}
+
 if(TTL == 0){// destroys the instance after a countdown
 	instance_destroy()
 }

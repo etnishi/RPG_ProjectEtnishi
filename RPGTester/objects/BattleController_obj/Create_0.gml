@@ -5,14 +5,6 @@ enemies = []
 // arrays that contain the IDs of battle entities in each team
 allies = []
 
-lootTable = []
-// array of possible loot drops
-// loot entry: [rate out of 100 (2 lowest, 99 highest), item]
-// rolling a 1 guarantees you all possible item drops
-reward = [1]
-// rewarded post battle
-// index 0 is exp amount 
-
 curSide = false // it true is allies else enemies
 
 done = false	// whether the battle is over

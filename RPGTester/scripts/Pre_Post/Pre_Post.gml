@@ -55,4 +55,6 @@ function Post_Script(){
 	for(var i = 0; i < array_length(PostTurn); i ++){
 		PostTurn[i]()
 	}
+	with(BattleController_obj)
+		Controller_PostTurn()
 }

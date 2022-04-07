@@ -38,7 +38,7 @@ function Clone_and_Set(targ, elec){
 
 function setup_Spread_Out(){
 	//30, [1,0,0,0,0,0], 0, true, Spread_Out
-	Base = 30 
+	Base = 1 
 	DAM = [1,0,0,0,0,0]
 	AccuracyMod = 0
 	Actions = [Spread_Out]

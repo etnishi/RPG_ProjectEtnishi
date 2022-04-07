@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Enemy_Attacks",
-    "path": "folders/Scripts/AttackScripts/Enemy_Attacks.yy",
+    "name": "AttackScripts",
+    "path": "folders/Scripts/AttackScripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Do_Nothing",
+  "name": "Rapid_5",
   "tags": [],
   "resourceType": "GMScript",
 }

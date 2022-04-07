@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "AttackScripts",
-    "path": "folders/Scripts/AttackScripts.yy",
+    "name": "Enemies",
+    "path": "folders/Scripts/Battle_Entity_Inits/Enemies.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Rapid_20",
+  "name": "Init_Enemy_Base",
   "tags": [],
   "resourceType": "GMScript",
 }

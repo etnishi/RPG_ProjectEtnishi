@@ -10,10 +10,16 @@ if(shotCount > 0){
 	ins.Actions = Actions
 	ins.Side = Side
 	if(randTarg){
-		if(!Side){
-			ins.target = BattleController_obj.allies[irandom_range(0, array_length(BattleController_obj.allies) - 1)]
+		var t = 0
+		if(Side){
+			t = GetRandInd(!Side)
 		}else{
-			ins.target = BattleController_obj.enemies[irandom_range(0, array_length(BattleController_obj.enemies) - 1)]
+			t = GetRandInd(!Side)
+		}
+		if(!Side){
+			ins.target = BattleController_obj.allies[t]
+		}else{
+			ins.target = BattleController_obj.enemies[t]
 		}
 	}else{
 		ins.target = target

@@ -1,20 +1,18 @@
 
+global.Player_Team = [Init_Rob(), Init_Olly()]
+// setup of players
+
+global.indexes = [-1, -1]
+
+var enemyArr = [Init_Enemy(), Init_Enemy(), Init_Enemy()]
+
 var ins = instance_create_layer(0, 0, "Instances", BattleController_obj)
-var ins2 = instance_create_layer(200, 100, "Instances", Battle_Entity_Player_obj)
-ins2.SPD = 50
-ins2.Active = [["Basic attack", "Hit one enemy", setup_Basic_Do_Damage],
-				["Spread attack", "Hits all enemies", setup_Spread_Out],
-				["20 hit", "20 hits", setup_Rapid_20]]
-ins.allies = [ins2]
-ins2 = instance_create_layer(200, 100, "Instances", Battle_Entity_Player_obj)
-ins2.SPD = 50
-ins.allies[1] = ins2
-ins2 = instance_create_layer(200, 300, "Instances", Battle_Entity_Enemy_obj)
-ins2.insName = "enemy 1"
-ins.enemies = [ins2]
-ins2 = instance_create_layer(300, 300, "Instances", Battle_Entity_Enemy_obj)
-ins2.insName = "enemy 2"
-ins.enemies[1] = ins2
+
+setup_Alies(ins)
+
+setup_Enemies(ins, enemyArr)
+
+
 //ins2 = instance_create_layer(400, 300, "Instances", Battle_Entity_Enemy_obj)
 //ins2.insName = "enemy 3"
 //ins.enemies[2] = ins2

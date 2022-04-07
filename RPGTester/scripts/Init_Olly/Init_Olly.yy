@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Enemy_Attacks",
-    "path": "folders/Scripts/AttackScripts/Enemy_Attacks.yy",
+    "name": "Battle_Entity_Inits",
+    "path": "folders/Scripts/Battle_Entity_Inits.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Do_Nothing",
+  "name": "Init_Olly",
   "tags": [],
   "resourceType": "GMScript",
 }

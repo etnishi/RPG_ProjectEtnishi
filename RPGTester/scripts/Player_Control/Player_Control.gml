@@ -2,13 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Player_Control(){
 	
-	if(keyboard_check_pressed(vk_shift)){// cancels current selection
+	if(keyboard_check_pressed(global.back)){// cancels current selection
 		selectLevel = 0
 		subSelect = 0
 		selectSkill = 0
 	}
 	
-	if(keyboard_check_pressed(ord("D"))){
+	if(keyboard_check_pressed(global.keyRight)){
 		if(selectLevel > 0){// select through targets
 			if(target < Arr_Length_Side(targetSide)){
 				target ++
@@ -24,7 +24,7 @@ function Player_Control(){
 		}
 	}
 	
-	if(keyboard_check_pressed(ord("A"))){
+	if(keyboard_check_pressed(global.keyLeft)){
 		if(selectLevel > 0){// select through targets
 			if(target > 0){
 				target --
@@ -40,15 +40,15 @@ function Player_Control(){
 		}
 	}
 	
-	if(keyboard_check_pressed(ord("W"))){
+	if(keyboard_check_pressed(global.keyUp)){
 		// todo: show more information?
 	}
 	
-	if(keyboard_check_pressed(ord("S"))){
+	if(keyboard_check_pressed(global.keyDown)){
 		// swap target side?
 	}
 	
-	if(keyboard_check_pressed(vk_space)){// confirm action
+	if(keyboard_check_pressed(global.confirm)){// confirm action
 		selectLevel ++
 		if(selectLevel > 1){// after secondary confirmation
 			show_debug_message("Player Control Space")

@@ -1,23 +1,50 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(keyboard_check(ord("D"))){
-	hspeed = 5
+if(keyboard_check(global.keyRight)){
+	hspeed = mSpeed
 }
-if(keyboard_check(ord("A"))){
-	hspeed = -5
+if(keyboard_check(global.keyLeft)){
+	hspeed = -mSpeed
 }
-
-if(keyboard_check(ord("W"))){
-	vspeed = -5
-}
-if(keyboard_check(ord("S"))){
-	vspeed = 5
+if(keyboard_check(global.keyLeft) and keyboard_check(global.keyRight)){
+	hspeed = 0
 }
 
 
-
-if(hspeed != 0){
-	show_debug_message("TST")
+if(keyboard_check(global.keyUp)){
+	vspeed = -mSpeed
 }
+if(keyboard_check(global.keyDown)){
+	vspeed = mSpeed
+}
+if(keyboard_check(global.keyDown) and keyboard_check(global.keyUp)){
+	vspeed = 0
+}
+
+
+if(keyboard_check(global.back)){
+	mSpeed = 10
+}else{
+	mSpeed = 5
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 event_inherited()

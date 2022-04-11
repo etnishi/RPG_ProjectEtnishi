@@ -29,22 +29,6 @@ if(keyboard_check(global.back)){
 	mSpeed = 5
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 event_inherited()
+
+do_col(Player_Only_Solid)

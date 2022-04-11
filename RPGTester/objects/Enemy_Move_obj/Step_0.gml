@@ -9,6 +9,15 @@ if(secondTimer == 60){
 	}
 }
 
+if(targ != "" and thinkCooldown > 0){
+	move_towards_point(targ.x, targ.y, mSpeed)
+}else{
+	targ = ""
+	if(idleDir >= 0){
+		motion_set(idleDir, mSpeed)
+	}
+}
+
 if(thinkCooldown == 0){
 	if(idleScr != ""){
 		idleScr()
@@ -16,12 +25,12 @@ if(thinkCooldown == 0){
 	if(targScr != ""){
 		targScr()
 	}
+}else if(thinkCooldown < 2){
+	idleDir = -1
 }
 
-if(targ != ""){
-	move_towards_point(targ.x, targ.y, mSpeed + 2)
-}
+
 
 event_inherited()
 
-
+do_col(Enemy_Only_Solid)

@@ -4,7 +4,9 @@
 thinkMax = 2
 thinkCooldown = thinkMax
 
-idleScr = ""
+idleScr = RandomDir_Mov
+
+idleDir = -1
 
 targScr = SightCone_targ
 

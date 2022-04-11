@@ -29,7 +29,12 @@ if(thinkCooldown == 0){
 	idleDir = -1
 }
 
-
+if(place_meeting(x, y, Player_Move_obj)){
+	global.Enemy_Team = [Init_Enemy()]
+	global.lastRoom = room
+	room_goto(BattleRoom)
+	instance_destroy()
+}
 
 event_inherited()
 

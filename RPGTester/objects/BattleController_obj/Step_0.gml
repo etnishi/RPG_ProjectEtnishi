@@ -136,5 +136,8 @@ if(init){
 		
 		show_debug_message("Battle over")
 		
+		
+		
+		room_goto(global.lastRoom)
 	}
 }

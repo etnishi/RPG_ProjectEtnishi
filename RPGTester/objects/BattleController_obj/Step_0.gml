@@ -1,8 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(frameCount > 0)
+	frameCount --
+else
+	frameCount = 60
+
 if(init){
 	init = false
+	
+	array_push(BattleController_obj.notificationLines, enemies[0].insName + enemies[0].approach)
 	
 	if(getTeamAvgSpd(allies) > getTeamAvgSpd(enemies)){
 		curSide = true
@@ -46,98 +53,115 @@ if(init){
 	}
 	
 }else{
-	if(!done){
-		if(!instance_exists(Entity_Attack_Super_obj)){
-			if(curSide){
-				if(curTurn < array_length(allies)){
-					if(allies[curTurn].controlType != ""){
-						with(allies[curTurn]){
-							Pre_Script()
-							if((Status[3] == 0) and (Status[4] == 0))
-								controlType()	// ally control script
-							else{
-								var dind = ds_list_find_index(global.indexes[0], BattleController_obj.curTurn)
-								if(dind != -1){
-									ds_list_delete(global.indexes[0], BattleController_obj.curTurn)
+	if(start){
+		if(!done){
+			if(!instance_exists(Entity_Attack_Super_obj)){
+				if(curSide){
+					if(curTurn < array_length(allies)){
+						if(allies[curTurn].controlType != ""){
+							with(allies[curTurn]){
+								Pre_Script()
+								if((Status[3] == 0) and (Status[4] == 0)){
+									controlType()	// ally control script
+								}else{
+									var dind = ds_list_find_index(global.indexes[0], BattleController_obj.curTurn)
+									if(dind != -1){
+										ds_list_delete(global.indexes[0], BattleController_obj.curTurn)
+									}
+									BattleController_obj.curTurn ++
 								}
-								BattleController_obj.curTurn ++
 							}
+						}else{
+							curTurn ++
 						}
-					}else{
-						curTurn ++
+					}else{// switch from ally to enemy
+						show_debug_message("Switch sides")
+						array_push(BattleController_obj.notificationLines, "Enemy Side")
+						curTurn = 0
+						turnCount ++
+						curSide = !curSide
 					}
-				}else{// switch from ally to enemy
-					show_debug_message("Switch sides")
-					array_push(BattleController_obj.notificationLines, "Enemy Side")
-					curTurn = 0
-					turnCount ++
-					curSide = !curSide
+				}else{
+					if(curTurn < array_length(enemies)){
+						if(enemies[curTurn].controlType != ""){
+							with(enemies[curTurn]){
+								Pre_Script()
+								if((Status[3] == 0) and (Status[4] == 0))
+									controlType()	// enemy control script
+								else{
+									var dind = ds_list_find_index(global.indexes[1], BattleController_obj.curTurn)
+									if(dind != -1){
+										ds_list_delete(global.indexes[1], BattleController_obj.curTurn)
+									}
+									BattleController_obj.curTurn ++
+								}
+							}
+						}else{
+							curTurn ++
+						}
+					}else{// switch from enemy to ally
+						show_debug_message("Back to Player/ally")
+						array_push(BattleController_obj.notificationLines, "Player Side")
+						curTurn = 0
+						turnCount ++
+						curSide = !curSide
+					}
+				}
+			}
+			Controller_PostTurn()
+			if(winner != -1)
+				done = true
+		}else{// battle over
+			while(instance_exists(Entity_Attack_Super_obj)){
+				instance_destroy(Entity_Attack_Super_obj)
+			}
+			if(winner == 0){
+				// loss
+				for(var i = 0; i < array_length(allies); i ++){
+					instance_destroy(allies[i])
+				}
+				allies = []
+			}else if(winner == 1){
+				// win
+				for(var i = 0; i < array_length(enemies); i ++){
+					for(var k = 0; k < array_length(enemies[i].lootDrops);k ++){
+						array_push(lootTable, enemies[i].lootDrops[k])
+					}
+					instance_destroy(enemies[i])
+				}
+				enemies = []
+				var lootRoll = irandom_range(1, 100)
+				for(var i = 0; i < array_length(lootTable); i ++){
+					if(lootRoll <= lootTable[i][0]){
+						// got item
+						array_push(reward, lootTable[i][1])
+					}
 				}
 			}else{
-				if(curTurn < array_length(enemies)){
-					if(enemies[curTurn].controlType != ""){
-						with(enemies[curTurn]){
-							Pre_Script()
-							if((Status[3] == 0) and (Status[4] == 0))
-								controlType()	// enemy control script
-							else{
-								var dind = ds_list_find_index(global.indexes[1], BattleController_obj.curTurn)
-								if(dind != -1){
-									ds_list_delete(global.indexes[1], BattleController_obj.curTurn)
-								}
-								BattleController_obj.curTurn ++
+				// other
+				
+			}
+			
+			show_debug_message("Battle over")
+			
+			if(keyboard_check_pressed(global.confirm)){
+				if(winner == 1){
+					for(var i = 0; i < array_length(allies); i ++){
+						for(var o = 0; o < array_length(global.Player_Team); o ++){
+							if(global.Player_Team[o][0] == allies[i].insName){
+								global_update(o, allies[i])
 							}
 						}
-					}else{
-						curTurn ++
 					}
-				}else{// switch from enemy to ally
-					show_debug_message("Back to Player/ally")
-					array_push(BattleController_obj.notificationLines, "Player Side")
-					curTurn = 0
-					turnCount ++
-					curSide = !curSide
+					room_goto(global.lastRoom)
+				}else{
+					return_Recall()
 				}
 			}
 		}
-		Controller_PostTurn()
-		if(winner != -1)
-			done = true
-	}else{// battle over
-		while(instance_exists(Entity_Attack_Super_obj)){
-			instance_destroy(Entity_Attack_Super_obj)
+	}else{
+		if(keyboard_check_pressed(global.confirm)){
+			start = true
 		}
-		if(winner == 0){
-			// loss
-			for(var i = 0; i < array_length(allies); i ++){
-				instance_destroy(allies[i])
-			}
-			allies = []
-		}else if(winner == 1){
-			// win
-			for(var i = 0; i < array_length(enemies); i ++){
-				for(var k = 0; k < array_length(enemies[i].lootDrops);k ++){
-					array_push(lootTable, enemies[i].lootDrops[k])
-				}
-				instance_destroy(enemies[i])
-			}
-			enemies = []
-			var lootRoll = irandom_range(1, 100)
-			for(var i = 0; i < array_length(lootTable); i ++){
-				if(lootRoll <= lootTable[i][0]){
-					// got item
-					array_push(reward, lootTable[i][1])
-				}
-			}
-		}else{
-			// other
-			
-		}
-		
-		show_debug_message("Battle over")
-		
-		
-		
-		room_goto(global.lastRoom)
 	}
 }

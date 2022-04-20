@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+frameCount = 60
+
 enemies = []
 // arrays that contain the IDs of battle entities in each team
 allies = []
@@ -32,10 +34,13 @@ canRun = true
 init = true
 // init for first step
 
+start = false
+// wait for player to start fight
+
 global.timeStop = false
 // for time stop action
 // not sure how it will be implemented
 
 // notification variables
-notificationLines = ["Battle Start"]
+notificationLines = []
 

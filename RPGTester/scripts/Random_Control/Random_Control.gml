@@ -23,6 +23,8 @@ function Random_Control(){
 		selectLevel = 0
 		BattleController_obj.curTurn ++
 		firstStep = true
+		
+		
 	}
 	
 }

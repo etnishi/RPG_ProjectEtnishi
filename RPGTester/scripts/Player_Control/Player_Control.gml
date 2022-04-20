@@ -69,7 +69,7 @@ function Player_Control(){
 	}
 	
 	
-	
+	/*
 	if(keyboard_check_pressed(vk_anykey)){
 		show_debug_message("--DEBUG--")
 		show_debug_message("select Level " + string(selectLevel))
@@ -79,5 +79,5 @@ function Player_Control(){
 		show_debug_message("cur health " + string(CHP))
 		show_debug_message("---------")
 	}
-	
+	*/
 }

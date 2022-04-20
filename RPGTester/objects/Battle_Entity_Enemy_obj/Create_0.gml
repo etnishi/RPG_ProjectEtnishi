@@ -10,3 +10,13 @@ Side = false// false is enemy side
 targetSide = !Side
 
 lootDrops = []
+
+approach = " Attacks"
+
+changeRate = 1
+
+thinkArr = []
+/*
+The think arr contains weight values for targetting
+
+*/

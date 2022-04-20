@@ -14,7 +14,26 @@ for(var i = 0; i < 8; i ++){// fetch the last 8 strings in the notification line
 }
 draw_line_color((room_width/2), 0, (room_width/2), room_height, c_red, c_red)
 
-if(curSide){
-	if(curTurn < array_length(allies))
-		draw_sprite(TargetArrow_spr, 0, allies[curTurn].x, allies[curTurn].y)
+if(done){
+	draw_set_halign(fa_center);
+	draw_sprite(Start_Box_spr, 0, room_width/2, room_height/2 + 16)
+	draw_sprite(Confirm_Prompt_spr, floor(frameCount / 30), room_width/2 + 39, room_height/2 + 20)
+	draw_text(room_width/2, room_height/2, "BATTLE DONE")
+	draw_set_halign(fa_left);
+}else{
+	if(curSide){
+		if(curTurn < array_length(allies))
+			draw_sprite(TargetArrow_spr, 0, allies[curTurn].x, allies[curTurn].y)
+	}
 }
+
+if(!start){
+	draw_set_halign(fa_center);
+	draw_sprite(Start_Box_spr, 0, room_width/2, room_height/2 + 16)
+	draw_sprite(Confirm_Prompt_spr, floor(frameCount / 30), room_width/2 + 39, room_height/2 + 20)
+	draw_text(room_width/2, room_height/2, "BATTLE START")
+	draw_set_halign(fa_left);
+}
+
+
+

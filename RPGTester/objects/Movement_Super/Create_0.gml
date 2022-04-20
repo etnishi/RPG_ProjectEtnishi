@@ -7,6 +7,11 @@ mSpeed = 5
 secondTimer = 60
 // timer for events that happen once per second
 
+heightLevel = 0
+heightCur = 0
+
+xMid = sprite_width  / 2
+yMid = sprite_height / 2
 
 function do_col(col_Object){
 	var thspd = 0

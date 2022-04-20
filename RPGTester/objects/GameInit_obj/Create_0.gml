@@ -17,4 +17,16 @@ global.Enemy_Team = [Init_Enemy()]
 
 global.lastRoom = Overworld
 
+global.flags = []
+
+global.textSpeed = 0.2
+
+global.Recall = []
+global.Recall[5] = ""
+global.Recall[0] = global.Player_Team
+global.Recall[1] = 0
+global.Recall[2] = 0
+global.Recall[3] = Overworld
+global.Recall[4] = global.flags
+
 room_goto(Overworld)

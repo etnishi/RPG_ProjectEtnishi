@@ -87,3 +87,5 @@ smart*,		will try to choose best option
 scripted,	will always follow determined path
 
 */
+
+changeRate = 0.2

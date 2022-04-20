@@ -23,6 +23,8 @@ function Basic_Do_Damage(tIns, sIns){
 		//tIns.insName + " takes " + string(totDamage) + " Damage")
 		//show_debug_message(tIns.insName + " has " + string(tIns.TargetHP))
 		show_debug_message("-------------------")
+		var dm = instance_create_layer(x,y,"Attack_Layer", Damage_Num_obj)
+		dm.val = totDamage
 	}else{
 		array_push(BattleController_obj.notificationLines, "Missed")
 	}

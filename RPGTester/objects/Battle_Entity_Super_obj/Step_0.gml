@@ -12,7 +12,7 @@ for(var i = 0; i < array_length(Other); i ++){	// handles contextual Other skill
 }
 
 if(TargetHP < ceil(CHP)){			// HP reduce / gain
-	CHP -= 0.2						// slowly decreases or increases hp
+	CHP -= changeRate				// slowly decreases or increases hp
 }else if(TargetHP > ceil(CHP)){	// if character takes critical damage,
 	CHP = ceil(CHP + 1)			// will not go down until CHP reaches 0
 }								// 

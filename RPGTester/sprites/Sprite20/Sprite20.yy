@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "RPGTester",
-    "path": "RPGTester.yyp",
+    "name": "Debug_Sprites",
+    "path": "folders/Sprites/Debug_Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "Sprite20",

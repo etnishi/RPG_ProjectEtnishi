@@ -19,7 +19,7 @@ global.lastRoom = Overworld
 
 global.flags = []
 
-global.textSpeed = 0.2
+global.textSpeed = 0.5
 
 global.Recall = []
 global.Recall[5] = ""

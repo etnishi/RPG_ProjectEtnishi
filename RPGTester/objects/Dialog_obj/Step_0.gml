@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 if(array_length(Lines) > 0){
+	
 	if(charInd < string_length(Lines[lineInd][0])){
 		charInd += global.textSpeed
 	}
@@ -22,6 +23,8 @@ if(array_length(Lines) > 0){
 		lineInd = 0
 		charInd = 0
 	}
+}else{
+	
 }
 
 if(sourceIns != ""){

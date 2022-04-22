@@ -6,4 +6,4 @@ if(ins){
 	targHeight = ins.targHeight - 1
 }
 
-
+event_inherited()

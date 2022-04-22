@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "Overworld_Super",
+    "path": "objects/Overworld_Super/Overworld_Super.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

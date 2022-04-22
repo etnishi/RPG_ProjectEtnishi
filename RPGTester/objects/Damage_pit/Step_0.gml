@@ -8,3 +8,5 @@ if(charge > 20){
 	}
 	charge = 0
 }
+
+event_inherited()

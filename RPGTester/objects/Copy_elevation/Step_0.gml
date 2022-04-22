@@ -8,3 +8,4 @@ if(targHeight == 0){
 	}
 }
 
+event_inherited()

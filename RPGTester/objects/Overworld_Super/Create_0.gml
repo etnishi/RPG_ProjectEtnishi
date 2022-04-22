@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-heightLevel = targHeight
-event_inherited()
+
+heightLevel = 0
+heightCur = 0

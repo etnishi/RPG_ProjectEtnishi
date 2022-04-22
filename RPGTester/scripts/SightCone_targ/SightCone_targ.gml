@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SightCone_targ(){
 	if(targIns == ""){
-		targIns = instance_create_layer(x + (sprite_width/2), y + (sprite_height/2), "Instances", SightCone_sub_obj)
+		targIns = instance_create_layer(x + (sprite_width/2), y + (sprite_height/2), "Behind_Instances", SightCone_sub_obj)
 		targIns.source = self
 		targIns.target = Player_Move_obj
 	}

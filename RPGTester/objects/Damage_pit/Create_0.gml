@@ -9,3 +9,4 @@ yMid = sprite_height/2
 start = false
 
 heightLevel = 0
+event_inherited()

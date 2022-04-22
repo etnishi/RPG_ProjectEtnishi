@@ -11,11 +11,13 @@ if(secondTimer > 0){
 var ins = instance_place(x,y,Elevate_super)
 
 if(ins){
-	if(abs(ins.targHeight - heightCur) <= 1)
+	if(abs(ins.targHeight - heightCur) <= 1){
 		heightCur = ins.targHeight
+	}
 }else{
 	heightCur = 0
 }
 
 do_col(Solid_Super)
+event_inherited()
 // update movement speed

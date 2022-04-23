@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "Solid_Super",
+    "path": "objects/Solid_Super/Solid_Super.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

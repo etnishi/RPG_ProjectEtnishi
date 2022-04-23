@@ -30,10 +30,12 @@ if(thinkCooldown == 0){
 }
 
 if(place_meeting(x, y, Player_Move_obj)){
-	global.Enemy_Team = [Init_Enemy()]
-	global.lastRoom = room
-	room_goto(BattleRoom)
-	instance_destroy()
+	if(heightLevel == Player_Move_obj.heightLevel){
+		global.Enemy_Team = [Init_Enemy()]
+		global.lastRoom = room
+		room_goto(BattleRoom)
+		instance_destroy()
+	}
 }
 
 event_inherited()

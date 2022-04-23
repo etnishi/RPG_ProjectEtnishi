@@ -19,15 +19,21 @@ function do_col(col_Object){
 	var sgnh = sign(hspeed)
 	var sgnv = sign(vspeed)
 	// snapshot of current movement speed
-
+	
 	for(var i = 1; i < abs(hspeed); i ++){
-		if(!place_meeting(x + (i * sgnh), y, col_Object)){
+		var ins = instance_place(x + (i * sgnh), y, col_Object)
+		if(!ins){
+			thspd ++
+		}else if(ins.heightLevel != heightLevel){
 			thspd ++
 		}
 	}
 
 	for(var i = 1; i < abs(vspeed); i ++){
-		if(!place_meeting(x, y + (i * sgnv), col_Object)){
+		var ins = instance_place(x, y + (i * sgnv), col_Object)
+		if(!ins){
+			tvspd ++
+		}else if(ins.heightLevel != heightLevel){
 			tvspd ++
 		}
 	}

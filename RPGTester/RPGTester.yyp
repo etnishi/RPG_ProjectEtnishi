@@ -18,6 +18,7 @@
     {"id":{"name":"Movement_Super","path":"objects/Movement_Super/Movement_Super.yy",},"order":0,},
     {"id":{"name":"Sprite16","path":"sprites/Sprite16/Sprite16.yy",},"order":4,},
     {"id":{"name":"Controller_PostTurn","path":"scripts/Controller_PostTurn/Controller_PostTurn.yy",},"order":10,},
+    {"id":{"name":"Solid_Controller","path":"objects/Solid_Controller/Solid_Controller.yy",},"order":4,},
     {"id":{"name":"Player_Move_obj","path":"objects/Player_Move_obj/Player_Move_obj.yy",},"order":2,},
     {"id":{"name":"Player_Only_Solid","path":"objects/Player_Only_Solid/Player_Only_Solid.yy",},"order":3,},
     {"id":{"name":"RoomStarter_obj","path":"objects/RoomStarter_obj/RoomStarter_obj.yy",},"order":0,},

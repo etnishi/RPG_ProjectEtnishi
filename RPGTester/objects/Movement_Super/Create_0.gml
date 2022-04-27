@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+firstStep = true
+
 mSpeed = 5
 // base movement speed value
 
@@ -24,7 +26,7 @@ function do_col(col_Object){
 		var ins = instance_place(x + (i * sgnh), y, col_Object)
 		if(!ins){
 			thspd ++
-		}else if(ins.heightLevel != heightLevel){
+		}else if(ins.heightLevel != -1 and ins.heightLevel != heightLevel){
 			thspd ++
 		}
 	}
@@ -33,7 +35,7 @@ function do_col(col_Object){
 		var ins = instance_place(x, y + (i * sgnv), col_Object)
 		if(!ins){
 			tvspd ++
-		}else if(ins.heightLevel != heightLevel){
+		}else if(ins.heightLevel != -1 and ins.heightLevel != heightLevel){
 			tvspd ++
 		}
 	}

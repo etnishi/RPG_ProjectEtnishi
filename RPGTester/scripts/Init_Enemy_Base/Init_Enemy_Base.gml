@@ -19,7 +19,6 @@ function Init_Enemy(){
 				["Spread attack", "Hits all enemies", setup_Spread_Out],
 				["Basic attack", "Hit one enemy", setup_Basic_Do_Damage]]
 	var react = []
-	react[0] = Endure
 	var oth = []
 	
 	arr[19] = Random_Control	// control

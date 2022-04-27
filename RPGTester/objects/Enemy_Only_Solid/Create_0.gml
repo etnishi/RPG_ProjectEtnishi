@@ -2,5 +2,3 @@
 // You can write your code in this editor
 
 heightLevel = -1
-
-init = false

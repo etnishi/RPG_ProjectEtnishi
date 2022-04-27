@@ -123,6 +123,16 @@ if(init){
 				allies = []
 			}else if(winner == 1){
 				// win
+				if(array_length(BattleController_obj.notificationLines) > 1){
+					if(curTurn < array_length(allies)){
+						Notification_obj.Notification = string(allies[curTurn].insName + " Wins!")
+						Notification_obj.pauseTimer = 160
+					}else{
+						Notification_obj.Notification = string(allies[0].insName + " Wins!")
+						Notification_obj.pauseTimer = 160
+					}
+					BattleController_obj.notificationLines = []
+				}
 				for(var i = 0; i < array_length(enemies); i ++){
 					for(var k = 0; k < array_length(enemies[i].lootDrops);k ++){
 						array_push(lootTable, enemies[i].lootDrops[k])
@@ -142,17 +152,25 @@ if(init){
 				
 			}
 			
-			show_debug_message("Battle over")
+			
 			
 			if(keyboard_check_pressed(global.confirm)){
+				show_debug_message("Battle over")
 				if(winner == 1){
 					for(var i = 0; i < array_length(allies); i ++){
 						for(var o = 0; o < array_length(global.Player_Team); o ++){
 							if(global.Player_Team[o][0] == allies[i].insName){
+								if(allies[i].EXP < global.Team_Exp){
+									allies[i].EXP += reward[0] * (global.Team_Exp / allies[i].EXP)
+									// bonus catch up EXP
+								}else{
+									allies[i].EXP += reward[0]
+								}
 								global_update(o, allies[i])
 							}
 						}
 					}
+					global.Team_Exp += reward[0]
 					room_goto(global.lastRoom)
 				}else{
 					return_Recall()

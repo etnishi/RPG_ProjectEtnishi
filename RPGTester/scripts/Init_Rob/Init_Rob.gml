@@ -27,8 +27,8 @@ function Init_Rob(){
 	arr[1] = 8		// xp
 	arr[2] = 120	// mhp
 	arr[3] = 120	// chp
-	arr[4] = 0		// mmp
-	arr[5] = 0		// mcp
+	arr[4] = 10		// mmp
+	arr[5] = 10		// mcp
 	
 	arr[6] = 30		// atk
 	arr[7] = 30		// def

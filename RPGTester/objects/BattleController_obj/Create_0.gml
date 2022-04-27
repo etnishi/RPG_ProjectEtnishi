@@ -44,3 +44,9 @@ global.timeStop = false
 // notification variables
 notificationLines = []
 
+
+if(!instance_exists(Notification_obj)){
+	var ins = instance_create_layer(0, 0, "Attack_Layer", Notification_obj)
+	ins.doPause = false
+}
+

@@ -26,11 +26,11 @@ function Init_Olly(){
 	arr[1] = 8		// xp
 	arr[2] = 100	// mhp
 	arr[3] = 100	// chp
-	arr[4] = 0		// mmp
-	arr[5] = 0		// mcp
+	arr[4] = 1		// mmp
+	arr[5] = 1		// mcp
 	
 	arr[6] = 30		// atk
-	arr[7] = 30		// def
+	arr[7] = 40		// def
 	arr[8] = 1		// mag
 	arr[9] = 25		// agi
 	arr[10] = 20	// skl

@@ -10,6 +10,7 @@ global.back		= vk_shift
 
 global.Player_Team = [Init_Rob(), Init_Olly()]
 // setup of players
+global.Team_Exp = 0
 
 global.indexes = [-1, -1]
 

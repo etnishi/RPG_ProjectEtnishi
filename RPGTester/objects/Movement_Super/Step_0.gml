@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(firstStep){
+	var hi = instance_place(x,y,Elevate_super)
+	if(hi){
+		heightLevel = hi.heightLevel
+	}
+}
+
 if(secondTimer > 0){
 	secondTimer --
 }else{

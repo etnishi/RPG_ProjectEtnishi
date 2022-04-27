@@ -4,6 +4,10 @@
 Notification = ""
 curInd = 0
 
+doPause = true
+
+pauseTimer = 0
+
 backgroundSpr = ""
 
 confirm = 0

@@ -15,7 +15,7 @@ function Init_Enemy(){
 	var pre = []
 	var post = []
 	var act = []
-	act = [["Bash", "Description", Basic_Bash]]
+	act = [Basic_Bash()]
 	var react = []
 	var oth = []
 	

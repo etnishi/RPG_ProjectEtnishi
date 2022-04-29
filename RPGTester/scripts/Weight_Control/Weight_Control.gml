@@ -1,50 +1,56 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Weight_Control(){
+	var select = irandom_range(0, array_length(Active) - 1)
+	var targ = irandom_range(0, array_length(BattleController_obj.entities[0]) - 1)
+	var support = false
+	var weights = [[],[]]
 	
-	if(!firstStep){
-		for(var i = 0; i < array_length(BattleController_obj.entities[0]); i ++){
-			
-			var aIns = BattleController_obj.entities[0][i]
-	
-			if(aIns.Status[5] != 0){
-				thinkArr[i] = -100
-			}else if(aIns.Status[4] != 0){
-				thinkArr[i] -= 10
-			}else{
-				if(thinkArr[i] < 50){
-					
-				}
-			}
-			
+	for(var i = array_length(BattleController_obj.entities[0]) - 1; i >= 0; i ++){
+		// add weight to entity with low health
+		var side = 0
+		weights[0][i] = 0
+		var hPer = BattleController_obj.entities[side][i].CHP / BattleController_obj.entities[0][i].MHP
+		if(hPer < 0.5){
+			weights[0][i] ++
 		}
-		var top = 0
-		var targ = 0
-		for(var i = 0; i < array_length(thinkArr); i++){
-			if(thinkArr[i] > top){
-				targ = i
-				top = thinkArr[i]
-			}
+		if(hPer < 0.2){
+			weights[0][i] ++
 		}
 		
-		// chooses random action from action array
-		var select = irandom_range(0, array_length(Active) - 1)
-	
-		// todo: some way to choose a target on their own side for support
-		if(targetSide){
-			targ = irandom_range(0, array_length(BattleController_obj.entities[0]) - 1)
-			Create_Basic_Attack(BattleController_obj.entities[0][targ], Active[select])
-		}else{
-			targ = irandom_range(0, array_length(BattleController_obj.entities[1]) - 1)
-			Create_Basic_Attack(BattleController_obj.entities[1][targ], Active[select])
+		// Check if status
+		if(BattleController_obj.entities[side][i].Status[0] > 0){
+			weights[0][i] ++
 		}
-	
-		show_debug_message("Used action " + string(select))
-		// run all post scripts
-		Post_Script()
-		targetSide = !Side // resets target side to default
-		selectLevel = 0
-		BattleController_obj.turnInd ++
-		firstStep = true
+		if(BattleController_obj.entities[side][i].Status[1] > 0){
+			weights[0][i] ++
+		}
+		if(BattleController_obj.entities[side][i].Status[2] > 0){
+			weights[0][i] ++
+		}
+		if(BattleController_obj.entities[side][i].Status[3] > 0){
+			weights[0][i] ++
+		}
+		if(BattleController_obj.entities[side][i].Status[4] > 0){
+			weights[0][i] = -10
+			// if down sets weight to negative 
+		}
 	}
+	for(var i = array_length(BattleController_obj.entities[1]) - 1; i >= 0; i ++){
+		var side = 1
+		weights[0][i] = 0
+		var hPer = BattleController_obj.entities[side][i].CHP / BattleController_obj.entities[0][i].MHP
+		if(hPer < 0.4){
+			weights[0][i] += 5
+		}
+		if(hPer < 0.2){
+			support = false
+		}
+	}
+	
+	for(var i = 0; i < array_length(Actions); i++){
+		
+	}
+	
+	Active[select][2](targ, 0)
 }

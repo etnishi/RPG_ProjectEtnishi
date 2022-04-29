@@ -8,7 +8,7 @@ global.keyRight	= ord("D")
 global.confirm	= vk_space
 global.back		= vk_shift
 
-global.Player_Team = [Init_Rob(), Init_Olly()]
+global.Player_Team = [Init_Rob()]
 // setup of players
 global.Team_Exp = 0
 

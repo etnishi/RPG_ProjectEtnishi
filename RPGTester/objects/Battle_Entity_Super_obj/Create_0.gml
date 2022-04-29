@@ -1,16 +1,18 @@
 /// @description Creation script for the Battle Entity super object
 // You can write your code in this editor
 
-Side = false
+Side = 0
 
 initStep = true
 
-firstStep = true
-
 target = 0
-targetSide = !Side
-selectSkill = 0 
+
+doTurn = false
+
+targetSide = 0
 selectLevel = 0
+selectSkill = 0
+firstStep = false
 
 insName = "TESTER_DAN" // instance name. This is shown in notification box
 
@@ -23,13 +25,13 @@ MMP = 100		// max magic points
 CMP = MMP		// current magic points
 
 // base attribute stats
-BATK = 0	// modifyer used against the base physical damage of an attack
-BDEF = 0	// deffence modifier used with resistances
-BMAG = 0	// modifyer used against the base non physical damage of an attack
-BAGI = 0	// used to determine whether an attack hits (defence)
-BSKL = 0	// used to determine whether an attack hits (attack)
-BSPD = 0	// determines turn order
-BLCK = 0	// effects critical hits
+BATK = 10	// modifyer used against the base physical damage of an attack
+BDEF = 10	// deffence modifier used with resistances
+BMAG = 10	// modifyer used against the base non physical damage of an attack
+BAGI = 10	// used to determine whether an attack hits (defence)
+BSKL = 10	// used to determine whether an attack hits (attack)
+BSPD = 10	// determines turn order
+BLCK = 10	// effects critical hits
 // attribute stats
 ATK = BATK	// modifyer used against the base physical damage of an attack
 DEF = BDEF	// deffence modifier used with resistances
@@ -66,10 +68,10 @@ PreTurn = []	// skills that activate when turn starts
 PostTurn = []	// skills that activate after player has taken turn
 				// TBD
 
-Active = []		// skills available to choose from during turn. [0 , 1, 2, 3]
-Active[2] = ["Nothing", insName + " does nothing (Not for player use)", setup_Do_Nothing]
-Active[0] = ["Basic attack", "Hit one enemy", setup_Basic_Do_Damage]
-Active[1] = ["Spread attack", "Hits all enemies", setup_Spread_Out]
+Active = [["Bash", "Description", Basic_Bash], "", "", "", "", "", "", "", "", "", ""]
+// skills available to choose from during turn. [0, ..., 10]
+
+
 
 Reactive = [Endure]	// iterate through when hit by attack
 

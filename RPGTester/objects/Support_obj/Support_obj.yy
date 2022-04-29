@@ -1,12 +1,15 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "Sprite25",
+    "path": "sprites/Sprite25/Sprite25.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "Entity_Attack_Super_obj",
-    "path": "objects/Entity_Attack_Super_obj/Entity_Attack_Super_obj.yy",
+    "name": "Action_Super_obj",
+    "path": "objects/Action_Super_obj/Action_Super_obj.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -21,17 +24,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Attack_Entities",
-    "path": "folders/Objects/Attack_Entities.yy",
+    "name": "Action_Entities",
+    "path": "folders/Objects/Action_Entities.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Entity_Attack_Spawner_obj",
+  "name": "Support_obj",
   "tags": [],
   "resourceType": "GMObject",
 }

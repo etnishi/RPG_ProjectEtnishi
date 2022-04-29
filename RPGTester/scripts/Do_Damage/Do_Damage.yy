@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "AttackScripts",
-    "path": "folders/Scripts/AttackScripts.yy",
+    "name": "ActionScripts",
+    "path": "folders/Scripts/ActionScripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Rapid_5",
+  "name": "Do_Damage",
   "tags": [],
   "resourceType": "GMScript",
 }

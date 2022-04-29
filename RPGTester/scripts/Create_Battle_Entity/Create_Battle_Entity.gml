@@ -14,8 +14,8 @@ function Create_Battle_Entity(ctrIns, sid, arr, ctrType){
 		ins.controlType = ctrType
 	}
 	if(sid){
-		array_push(ctrIns.allies, ins)
+		array_push(ctrIns.entities[0], ins)
 	}else{
-		array_push(ctrIns.enemies, ins)
+		array_push(ctrIns.entities[1], ins)
 	}
 }

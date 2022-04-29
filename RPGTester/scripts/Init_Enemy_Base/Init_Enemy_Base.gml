@@ -15,9 +15,7 @@ function Init_Enemy(){
 	var pre = []
 	var post = []
 	var act = []
-	act = [["Basic attack", "Hit one enemy", setup_Basic_Do_Damage],
-				["Spread attack", "Hits all enemies", setup_Spread_Out],
-				["Basic attack", "Hit one enemy", setup_Basic_Do_Damage]]
+	act = [["Bash", "Description", Basic_Bash]]
 	var react = []
 	var oth = []
 	

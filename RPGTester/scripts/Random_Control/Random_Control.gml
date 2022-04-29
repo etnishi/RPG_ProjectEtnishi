@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Random_Control(){
-	
+	/*
 	if(!firstStep){
 		// chooses random action from action array
 		var select = irandom_range(0, array_length(Active) - 1)
@@ -21,10 +21,12 @@ function Random_Control(){
 		Post_Script()
 		targetSide = !Side // resets target side to default
 		selectLevel = 0
-		BattleController_obj.curTurn ++
+		BattleController_obj.turnInd ++
 		firstStep = true
 		
 		
 	}
-	
+	*/
+	var select = irandom_range(0, array_length(Active) - 1)
+	Active[select][2](0, 0)
 }

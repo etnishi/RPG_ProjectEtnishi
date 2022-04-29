@@ -15,8 +15,7 @@ function Init_Olly(){
 	var pre = []
 	var post = []
 	var act = []
-	act = [["Basic attack", "Hit one enemy", setup_Basic_Do_Damage],
-				["Spread attack", "Hits all enemies", setup_Spread_Out]]
+	act = [["Bash", "Description", Basic_Bash], "", "", "", "", "", "", "", "", "", ""]
 	var react = []
 	react[0] = Endure
 	var oth = []

@@ -15,9 +15,7 @@ function Init_Rob(){
 	var pre = []
 	var post = []
 	var act = []
-	act = [["Basic attack", "Hit one enemy", setup_Basic_Do_Damage],
-				["Spread attack", "Hits all enemies", setup_Spread_Out],
-				["5 hit", "5 hits", setup_Rapid_5]]
+	act = [["Bash", "Description", Basic_Bash], "", "", "", "", "", "", ["Bash2", "Description", Basic_Bash], "", "", ""]
 	var react = []
 	react[0] = Endure
 	var oth = []

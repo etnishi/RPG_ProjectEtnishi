@@ -1,52 +1,44 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-frameCount = 60
-
-enemies = []
-// arrays that contain the IDs of battle entities in each team
-allies = []
-
-lootTable = []
-// array of possible loot drops
-// loot entry: [rate out of 100 (2 lowest, 99 highest), item]
-// rolling a 1 guarantees you all possible item drops
-reward = [1]
-// rewarded post battle
-// index 0 is exp amount 
-
-curSide = false // it true is allies else enemies
-
-done = false	// whether the battle is over
-winner = -1		// 0 is enemy 1 is ally
-
-curTurn = 0
-
-environment = ""
-// may cause an effect to all entities but also might just be a background image
-
-turnCount = 0
-
-canRun = true
-// if player can run from this battle
-// certain battles can't run from
+frameCounter = 0
+turnCounter = 0
 
 init = true
-// init for first step
+turnStart = true
+pause = false
+done = false
+win = false
 
-start = false
-// wait for player to start fight
-
-global.timeStop = false
-// for time stop action
-// not sure how it will be implemented
-
-// notification variables
 notificationLines = []
 
+entities = [[],[]]
+// index 0 is allies 
+// index 1 is enemies
 
-if(!instance_exists(Notification_obj)){
-	var ins = instance_create_layer(0, 0, "Attack_Layer", Notification_obj)
-	ins.doPause = false
+sideInd = 0
+turnInd = 0
+
+loot = [1]
+// index 0 is Experience
+
+ground = ""
+// ground effect script
+
+air = ""
+// air effect script
+
+function team_check(arr){
+	var down = 0
+	for(var i = 0; i < array_length(arr); i ++){
+		if(arr[i].Status[3] > 0 or arr[i].Status[4] > 0){
+			down ++
+		}
+	}
+	if(down >= array_length(arr))
+		return true
+	else 
+		return false
 }
+
 

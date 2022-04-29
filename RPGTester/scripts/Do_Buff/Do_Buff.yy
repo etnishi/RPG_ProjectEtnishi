@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Enemy_Exclusive",
-    "path": "folders/Scripts/ActionScripts/Enemy_Exclusive.yy",
+    "name": "ActionScripts",
+    "path": "folders/Scripts/ActionScripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Do_Nothing",
+  "name": "Do_Buff",
   "tags": [],
   "resourceType": "GMScript",
 }

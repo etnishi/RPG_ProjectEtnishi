@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "Sprite2",
-    "path": "sprites/Sprite2/Sprite2.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -23,15 +20,16 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Attack_Entities",
-    "path": "folders/Objects/Attack_Entities.yy",
+    "name": "Obsolete_objs",
+    "path": "folders/Notes/Obsolete_objs.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Entity_Attack_Super_obj",
+  "name": "obs_Damage_Num_obj",
   "tags": [],
   "resourceType": "GMObject",
 }

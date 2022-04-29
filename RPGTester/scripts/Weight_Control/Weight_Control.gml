@@ -3,9 +3,9 @@
 function Weight_Control(){
 	
 	if(!firstStep){
-		for(var i = 0; i < array_length(BattleController_obj.allies); i ++){
+		for(var i = 0; i < array_length(BattleController_obj.entities[0]); i ++){
 			
-			var aIns = BattleController_obj.allies[i]
+			var aIns = BattleController_obj.entities[0][i]
 	
 			if(aIns.Status[5] != 0){
 				thinkArr[i] = -100
@@ -32,11 +32,11 @@ function Weight_Control(){
 	
 		// todo: some way to choose a target on their own side for support
 		if(targetSide){
-			targ = irandom_range(0, array_length(BattleController_obj.allies) - 1)
-			Create_Basic_Attack(BattleController_obj.allies[targ], Active[select])
+			targ = irandom_range(0, array_length(BattleController_obj.entities[0]) - 1)
+			Create_Basic_Attack(BattleController_obj.entities[0][targ], Active[select])
 		}else{
-			targ = irandom_range(0, array_length(BattleController_obj.enemies) - 1)
-			Create_Basic_Attack(BattleController_obj.enemies[targ], Active[select])
+			targ = irandom_range(0, array_length(BattleController_obj.entities[1]) - 1)
+			Create_Basic_Attack(BattleController_obj.entities[1][targ], Active[select])
 		}
 	
 		show_debug_message("Used action " + string(select))
@@ -44,7 +44,7 @@ function Weight_Control(){
 		Post_Script()
 		targetSide = !Side // resets target side to default
 		selectLevel = 0
-		BattleController_obj.curTurn ++
+		BattleController_obj.turnInd ++
 		firstStep = true
 	}
 }

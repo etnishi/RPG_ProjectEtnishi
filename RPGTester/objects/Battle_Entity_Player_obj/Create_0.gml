@@ -7,8 +7,8 @@ insName = "Player_Bob"// default name
 
 controlType = Player_Control// player input control
 
-Side = true// ally side
+Side = 0// ally side
 
-targetSide = !Side// default target is opposite of Side
+targetSide = 1// default target is opposite of Side
 
 subSelect = 0// sub menu selection index (obsolete) 

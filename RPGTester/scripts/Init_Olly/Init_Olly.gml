@@ -15,7 +15,7 @@ function Init_Olly(){
 	var pre = []
 	var post = []
 	var act = []
-	act = [Basic_Bash(), "", "", "", "", "", "", "", "", "", ""]
+	act = [Basic_Bash_I(), "", "", "", "", "", "", "", "", "", ""]
 	var react = []
 	react[0] = Endure
 	var oth = []

@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Obsolete_objs",
-    "path": "folders/Notes/Obsolete_objs.yy",
+    "name": "Battle_Entities",
+    "path": "folders/Objects/Battle_Entities.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obs_Damage_Num_obj",
+  "name": "Damage_Num_obj",
   "tags": [],
   "resourceType": "GMObject",
 }

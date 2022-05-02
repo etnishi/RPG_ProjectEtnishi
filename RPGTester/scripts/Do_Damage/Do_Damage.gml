@@ -26,4 +26,7 @@ function Do_Damage(targ, base, type){
 		total += tmp
 	}
 	targ.TargetHP -= total
+	var ins = instance_create_layer(x, y, "Attack_Layer", Damage_Num_obj)
+	ins.val = total
+	
 }

@@ -8,7 +8,7 @@ function Basic_Bash(targ, side){
 	doTurn = false
 }
 
-function Basic_Bash(){
+function Basic_Bash_I(){
 	return ["Bash", "Description", Basic_Bash, 0]
 }
 

@@ -8,7 +8,7 @@ if(doTurn){
 	var yoffA = 32
 	if(selectLevel > 0){// draws target marker
 	
-		if(targetSide){
+		if(targetSide == 0){
 			draw_sprite(TargetArrow_spr, 0, BattleController_obj.entities[0][target].x, BattleController_obj.entities[0][target].y - 42)
 		}else{
 			draw_sprite(TargetArrow_spr, 0, BattleController_obj.entities[1][target].x, BattleController_obj.entities[1][target].y - 42)

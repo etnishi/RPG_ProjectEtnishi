@@ -15,7 +15,7 @@ function Init_Rob(){
 	var pre = []
 	var post = []
 	var act = []
-	act = [Basic_Bash(), "", "", "", "", "", "", ["Bash2", "Description", Basic_Bash, 0], "", "", ""]
+	act = [Basic_Bash_I(), Heal_Low_I(), "", "", "", "", "", Multi_Bash_I(), "", "", ""]
 	var react = []
 	react[0] = Endure
 	var oth = []

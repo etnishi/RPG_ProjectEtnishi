@@ -53,11 +53,15 @@ function Player_Control(){
 	}
 	
 	if(keyboard_check_pressed(global.confirm)){// confirm action
+		if(selectLevel == 0){
+			target = 0
+			targetSide = getSide(Side, Active[selectSkill][3])
+		}
 		selectLevel ++
-		
 		if(selectLevel > 1){
-			Active[selectSkill][2](target, 1)
+			Active[selectSkill][2](target, targetSide)
 			selectLevel = 0
+			targetSide = 1
 		}
 		
 	}

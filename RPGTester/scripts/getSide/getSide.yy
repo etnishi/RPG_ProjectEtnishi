@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Do Actions",
-    "path": "folders/Scripts/ActionScripts/Do Actions.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Do_Damage",
+  "name": "getSide",
   "tags": [],
   "resourceType": "GMScript",
 }

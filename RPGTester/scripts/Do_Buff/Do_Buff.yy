@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "ActionScripts",
-    "path": "folders/Scripts/ActionScripts.yy",
+    "name": "Do Actions",
+    "path": "folders/Scripts/ActionScripts/Do Actions.yy",
   },
   "resourceVersion": "1.0",
   "name": "Do_Buff",

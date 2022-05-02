@@ -3,7 +3,7 @@
 
 function initBEntity(arr, side){
 	var ins = -1
-	if(side){
+	if(side == 0){
 		ins = instance_create_layer(0,0,"Instances", Battle_Entity_Player_obj)
 	}else{
 		ins = instance_create_layer(0,0,"Instances", Battle_Entity_Enemy_obj)
@@ -41,12 +41,12 @@ function initBEntity(arr, side){
 function setup_Alies(cIns){
 	for(var i = 0; i < array_length(global.Player_Team); i ++){
 		if(global.Player_Team[i] != -1)
-			array_push(cIns.entities[0], initBEntity(global.Player_Team[i], true ))
+			array_push(cIns.entities[0], initBEntity(global.Player_Team[i], 0 ))
 	}
 }
 
 function setup_Enemies(cIns, eArr){
 	for(var i = 0; i < array_length(eArr); i ++){
-		array_push(cIns.entities[1], initBEntity(eArr[i], false ))
+		array_push(cIns.entities[1], initBEntity(eArr[i], 1 ))
 	}
 }

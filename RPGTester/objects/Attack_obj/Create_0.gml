@@ -3,6 +3,6 @@
 
 event_inherited()
 
-type = [1, 0, 0, 0, 0, 0]
+eType = [1, 0, 0, 0, 0, 0]
 
 base = 10

@@ -3,9 +3,10 @@
 
 val = 0
 crit = false
-
+ben = false
 ttl = 50
 
 direction = irandom_range(30, 150)
 
-speed = irandom_range(1,5)
+speed = irandom_range(1,3)
+

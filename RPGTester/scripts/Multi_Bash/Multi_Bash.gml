@@ -12,7 +12,7 @@ function Multi_Bash(targ, side){
 }
 
 function Multi_Bash_I(){
-	return ["Bash", "Description", Multi_Bash, 0]
+	return ["Bash", "Description", Multi_Bash, 0, 0.3]
 }
 
 

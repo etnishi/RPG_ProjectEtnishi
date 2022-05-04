@@ -27,7 +27,7 @@ function Init_Enemy(){
 	arr[4] = 0		// mmp
 	arr[5] = 0		// mcp
 	
-	arr[6] = 10		// atk
+	arr[6] = 20		// atk
 	arr[7] = 10		// def
 	arr[8] = 1		// mag
 	arr[9] = 5		// agi

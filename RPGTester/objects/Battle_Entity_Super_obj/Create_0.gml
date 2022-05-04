@@ -2,10 +2,12 @@
 // You can write your code in this editor
 
 Side = 0
+insInd = 0
 
 initStep = true
 
 target = 0
+lastTarg = 0
 
 doTurn = false
 
@@ -38,18 +40,27 @@ DEF = BDEF	// deffence modifier used with resistances
 MAG = BMAG	// modifyer used against the base non physical damage of an attack
 AGI = BAGI	// used to determine whether an attack hits (defence)
 SKL = BSKL	// used to determine whether an attack hits (attack)
-SPD = BSPD	// determines turn order
+SPD = BSPD	// determines turn order (If its double the opponents causes extra hit?)
 LCK = BLCK	// effects critical hits
+
+BRES = []	// resistance stats (BASE)
+// these are multiplied against the DEF modifier 
+BRES[5]	= 0		// Unblockable this stat will always be 0
+BRES[0]	= 1		// Physical will usually be 1
+BRES[1]	= 0.5	// Thermal,		damage over time
+BRES[2]	= 0.5	// Cryo,		debuff
+BRES[3]	= 0.5	// Electric,	hits all targets 
+BRES[4]	= 0.5	// Magic,		no inherent extra
+// if a stat is equal to 3 then it will negate damage completely 
 
 RES = []	// resistance stats 
 // these are multiplied against the DEF modifier 
-RES[5]	= 0		// Unblockable this stat will always be 0
-RES[0]	= 1		// Physical will usually be 1
-RES[1]	= 0.5	// Thermal,		damage over time
-RES[2]	= 0.5	// Cryo,		debuff
-RES[3]	= 0.5	// Electric,	hits all targets 
-RES[4]	= 0.5	// Magic,		no inherent extra
-// if a stat is equal to 3 then it will negate damage completely 
+RES[5]	= BRES[5]	// Unblockable this stat will always be 0
+RES[0]	= BRES[0]	// Physical will usually be 1
+RES[1]	= BRES[1]	// Thermal,		damage over time
+RES[2]	= BRES[2]	// Cryo,		debuff
+RES[3]	= BRES[3]	// Electric,	hits all targets 
+RES[4]	= BRES[4]	// Magic,		no inherent extra
 
 Status = []		// turn cooldown for status effects if value is -1 then is immune to effect
 Status[7] = 0	// 

@@ -22,22 +22,35 @@ if(init){
 		entities[1][i].x = xoff + (i * sep) - xoffE
 		entities[1][i].y = yoff / 2
 	}
+	for(var o = 0; o < 2; o ++){
+		for(var i = 0; i < array_length(entities[o]); i ++){
+			with(entities[o][i]){
+				Pre_Script()
+			}
+			if(ground != ""){
+				ground(o, i)
+			}
+			if(air != ""){
+				air(o, i)
+			}
+		}
+	}
 }else if(!done){
 	if(!pause and !instance_exists(Attack_obj)){
 		
 		if(turnStart){
 			turnStart = false
-			if(ground != ""){
-				ground()
-			}
-			if(air != ""){
-				air()
-			}
 			array_push(notificationLines, "Turn " + string(turnCounter)+ " Start")
 			with(entities[sideInd][turnInd]){
 				Pre_Script()
 				doTurn = true
 				// execute entity pre turn control scripts
+			}
+			if(ground != ""){
+				ground(sideInd, turnInd)
+			}
+			if(air != ""){
+				air(sideInd, turnInd)
 			}
 		}else{
 			with(entities[sideInd][turnInd]){

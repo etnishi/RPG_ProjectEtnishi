@@ -9,7 +9,7 @@ function Basic_Bash(targ, side){
 }
 
 function Basic_Bash_I(){
-	return ["Bash", "Description", Basic_Bash, 0]
+	return ["Bash", "Description", Basic_Bash, 0, 0]
 }
 
 

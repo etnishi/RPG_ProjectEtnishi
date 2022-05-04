@@ -10,6 +10,14 @@ function Pre_Script(){
 	SKL = BSKL	// used to determine whether an attack hits (attack)
 	SPD = BSPD	// determines turn order
 	LCK = BLCK	// effects critical hits
+	
+	RES[5]	= BRES[5]	// Unblockable this stat will always be 0
+	RES[0]	= BRES[0]	// Physical will usually be 1
+	RES[1]	= BRES[1]	// Thermal,		damage over time
+	RES[2]	= BRES[2]	// Cryo,		debuff
+	RES[3]	= BRES[3]	// Electric,	hits all targets 
+	RES[4]	= BRES[4]	// Magic,		no inherent extra
+	
 	// run all pre turn scripts
 	for(var i = 0; i < array_length(PreTurn); i ++){
 		PreTurn[i]()

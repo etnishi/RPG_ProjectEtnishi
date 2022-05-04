@@ -8,6 +8,6 @@ function Heal_Low(targ, side){
 }
 
 function Heal_Low_I(){
-	return ["Heal", "TEST HEAL", Heal_Low, 1]
+	return ["Heal", "TEST HEAL", Heal_Low, 1, 0.5]
 }
 

@@ -28,7 +28,7 @@ function initBEntity(arr, side){
 		ins.BSPD = arr[11]		// determines turn order
 		ins.BLCK = arr[12]		// effects critical hits
 		
-		ins.RES			= arr[13]
+		ins.BRES		= arr[13]
 		ins.PreTurn		= arr[14]
 		ins.PostTurn	= arr[15]
 		ins.Active		= arr[16]
@@ -40,13 +40,16 @@ function initBEntity(arr, side){
 
 function setup_Alies(cIns){
 	for(var i = 0; i < array_length(global.Player_Team); i ++){
-		if(global.Player_Team[i] != -1)
+		if(global.Player_Team[i] != -1){
 			array_push(cIns.entities[0], initBEntity(global.Player_Team[i], 0 ))
+			cIns.entities[0][array_length(cIns.entities[0])-1].insInd = array_length(cIns.entities[0])-1
+		}
 	}
 }
 
 function setup_Enemies(cIns, eArr){
 	for(var i = 0; i < array_length(eArr); i ++){
 		array_push(cIns.entities[1], initBEntity(eArr[i], 1 ))
+		cIns.entities[1][array_length(cIns.entities[1])-1].insInd = array_length(cIns.entities[1])-1
 	}
 }

@@ -10,7 +10,7 @@ function Player_Control(){
 	
 	if(keyboard_check_pressed(global.keyRight)){
 		if(selectLevel > 0){// select through targets
-			if(target < Arr_Length_Side(targetSide)){
+			if(target < Arr_Length_Side(targetSide)-1){
 				target ++
 			}else{
 				target = 0
@@ -38,7 +38,7 @@ function Player_Control(){
 				if(selectSkill > 0 ){
 					selectSkill --
 				}else{
-					selectSkill = (array_length(Active) - 1)
+					selectSkill = (array_length(Active)-1)
 				}
 			}until(Active[selectSkill] != "")
 		}
@@ -53,15 +53,27 @@ function Player_Control(){
 	}
 	
 	if(keyboard_check_pressed(global.confirm)){// confirm action
-		if(selectLevel == 0){
-			target = 0
-			targetSide = getSide(Side, Active[selectSkill][3])
-		}
+		targetSide = getSide(Side, Active[selectSkill][3])
 		selectLevel ++
 		if(selectLevel > 1){
-			Active[selectSkill][2](target, targetSide)
-			selectLevel = 0
-			targetSide = 1
+			if(CMP >= (MMP * Active[selectSkill][4])){
+				CMP -= (MMP * Active[selectSkill][4])
+				Active[selectSkill][2](target, targetSide)
+				lastTarg = target
+				selectLevel = 0
+				targetSide = 1
+			}else{
+				selectLevel = 1
+			}
+		}else{
+			if(Side == targetSide){
+				target = insInd
+			}else{
+				if(lastTarg < Arr_Length_Side(targetSide))
+					target = lastTarg
+				else
+					target = 0
+			}
 		}
 		
 	}

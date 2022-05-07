@@ -32,8 +32,8 @@ global.textSpeed = 0.5
 global.Recall = []
 global.Recall[5] = ""
 global.Recall[0] = global.Player_Team
-global.Recall[1] = 0
-global.Recall[2] = 0
+global.Recall[1] = 100
+global.Recall[2] = 100
 global.Recall[3] = Overworld
 global.Recall[4] = global.flags
 
@@ -41,8 +41,9 @@ global.Recall[4] = global.flags
 //room_goto(Overworld)
 var dArr = [["Testing 1 2 3", ""], 
 	["This is a test RPG system that I am working on", ""], 
-	["", ""], 
-	["Silver Font by poppyworks, poppyworks.itch.io", ""], 
+	["The purpose of this is to practice working with GameMaker", ""],
+	["I may develop this into something more someday...", ""], 
+	["'Silver' Font by poppyworks, poppyworks.itch.io", ""], 
 	["Tilesets by Clockwork Raven Studios, clockworkraven.itch.io", ""], 
 	["starting the game ", StartGame]]
 

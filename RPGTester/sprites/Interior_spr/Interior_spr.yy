@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 1339,
+  "bbox_right": 2163,
   "bbox_top": 0,
   "bbox_bottom": 1343,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 1344,
+  "width": 2240,
   "height": 1344,
   "textureGroupId": {
     "name": "Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"851f3fe2-3338-4ab7-8d45-2c5c96a9a85a","path":"sprites/WinterOverworld_spr/WinterOverworld_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"851f3fe2-3338-4ab7-8d45-2c5c96a9a85a","path":"sprites/WinterOverworld_spr/WinterOverworld_spr.yy",},"LayerId":{"name":"f82464ee-2b7f-49b3-ad73-e0e13db88aed","path":"sprites/WinterOverworld_spr/WinterOverworld_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"WinterOverworld_spr","path":"sprites/WinterOverworld_spr/WinterOverworld_spr.yy",},"resourceVersion":"1.0","name":"851f3fe2-3338-4ab7-8d45-2c5c96a9a85a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ec35af15-5ac1-4a98-864a-e5f88583ffed","path":"sprites/Interior_spr/Interior_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ec35af15-5ac1-4a98-864a-e5f88583ffed","path":"sprites/Interior_spr/Interior_spr.yy",},"LayerId":{"name":"27bc92d5-039e-4299-96c2-d801d1f72403","path":"sprites/Interior_spr/Interior_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"Interior_spr","path":"sprites/Interior_spr/Interior_spr.yy",},"resourceVersion":"1.0","name":"ec35af15-5ac1-4a98-864a-e5f88583ffed","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"WinterOverworld_spr","path":"sprites/WinterOverworld_spr/WinterOverworld_spr.yy",},
+    "spriteId": {"name":"Interior_spr","path":"sprites/Interior_spr/Interior_spr.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0b09c6e4-d8e8-4520-88dd-36066fd93179","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"851f3fe2-3338-4ab7-8d45-2c5c96a9a85a","path":"sprites/WinterOverworld_spr/WinterOverworld_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2691bde8-bbe8-4cd2-ae83-64273f92d7d6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ec35af15-5ac1-4a98-864a-e5f88583ffed","path":"sprites/Interior_spr/Interior_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"WinterOverworld_spr","path":"sprites/WinterOverworld_spr/WinterOverworld_spr.yy",},
+    "parent": {"name":"Interior_spr","path":"sprites/Interior_spr/Interior_spr.yy",},
     "resourceVersion": "1.4",
-    "name": "WinterOverworld_spr",
+    "name": "Interior_spr",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f82464ee-2b7f-49b3-ad73-e0e13db88aed","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"27bc92d5-039e-4299-96c2-d801d1f72403","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Tile_Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "WinterOverworld_spr",
+  "name": "Interior_spr",
   "tags": [],
   "resourceType": "GMSprite",
 }

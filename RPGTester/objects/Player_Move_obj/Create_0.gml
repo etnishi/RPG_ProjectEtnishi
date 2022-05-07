@@ -6,6 +6,9 @@ event_inherited()
 xBack = 0
 yBack = 0
 
+x = global.Recall[1]
+y = global.Recall[2]
+
 active = 0
 
 control = 0

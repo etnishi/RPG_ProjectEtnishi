@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "Action_Super_obj",
-    "path": "objects/Action_Super_obj/Action_Super_obj.yy",
+    "name": "Attack_NoPause_obj",
+    "path": "objects/Attack_NoPause_obj/Attack_NoPause_obj.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

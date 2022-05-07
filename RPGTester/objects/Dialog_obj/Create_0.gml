@@ -2,7 +2,11 @@
 // You can write your code in this editor
 
 Lines = []
-// lines format	[["Line 1", EndFunction, [extra]], ["Line 2", EndFunction]]
+// lines format	[["Line 1", EndFunction, [extra]], ["Line 2", EndFunction, [extra]]]
+// Lines are Strings
+// EndFunction is the script executed at the end of the lines
+// Extra array is the array of visual changes that can be added to the dialog box
+// extra array [name, portrait, To Be Determined] can also be left blank
 
 lineInd = 0
 

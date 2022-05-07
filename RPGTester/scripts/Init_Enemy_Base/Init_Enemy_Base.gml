@@ -19,21 +19,22 @@ function Init_Enemy(){
 	var react = []
 	var oth = []
 	
+	arr[20] = 4
 	arr[19] = Random_Control	// control
 	arr[0] = "Tester Enemy"	// name
 	arr[1] = 8		// xp
-	arr[2] = 50	// mhp
-	arr[3] = 50	// chp
-	arr[4] = 0		// mmp
-	arr[5] = 0		// mcp
+	arr[2] = 90	// mhp
+	arr[3] = 90	// chp
+	arr[4] = 100	// mmp
+	arr[5] = 100	// mcp
 	
-	arr[6] = 20		// atk
-	arr[7] = 10		// def
-	arr[8] = 1		// mag
-	arr[9] = 5		// agi
+	arr[6] = 30		// atk
+	arr[7] = 25		// def
+	arr[8] = 15		// mag
+	arr[9] = 25		// agi
 	arr[10] = 20	// skl
-	arr[11] = 15	// spd
-	arr[12] = 0	// lck
+	arr[11] = 26	// spd
+	arr[12] = 20	// lck
 	
 	arr[13] = RES	// res
 	

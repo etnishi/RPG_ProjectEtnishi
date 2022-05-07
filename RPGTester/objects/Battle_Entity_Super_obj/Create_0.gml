@@ -1,8 +1,13 @@
 /// @description Creation script for the Battle Entity super object
 // You can write your code in this editor
 
+// role variable used for AI targeting 0 = TEK, 1 = DPS, 2 = TNK, 3 = HLR
+role = 0
+
 Side = 0
 insInd = 0
+
+val = 0
 
 initStep = true
 

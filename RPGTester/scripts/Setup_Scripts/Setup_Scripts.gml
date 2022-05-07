@@ -10,6 +10,7 @@ function initBEntity(arr, side){
 	}
 	if(ins != -1){
 		ins.Side = side
+		ins.role = arr[20]
 		ins.controlType	= arr[19]
 		ins.insName = arr[0]	// name
 		ins.EXP = arr[1]		// xp

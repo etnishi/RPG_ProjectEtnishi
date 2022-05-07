@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "ControlScripts",
-    "path": "folders/Scripts/ControlScripts.yy",
+    "name": "Enemy Control",
+    "path": "folders/Scripts/ControlScripts/Enemy Control.yy",
   },
   "resourceVersion": "1.0",
   "name": "Random_Control",

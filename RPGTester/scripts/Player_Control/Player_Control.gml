@@ -6,14 +6,26 @@ function Player_Control(){
 		selectLevel = 0
 		subSelect = 0
 		selectSkill = 0
+		if(lastTarg < Arr_Length_Side(targetSide) and isUp(targetSide, target)){
+			target = lastTarg
+		}else{
+			target = 0
+			while(!isUp(targetSide, target)){
+				target ++
+			}
+		}
 	}
 	
 	if(keyboard_check_pressed(global.keyRight)){
 		if(selectLevel > 0){// select through targets
-			if(target < Arr_Length_Side(targetSide)-1){
-				target ++
-			}else{
-				target = 0
+			if(Active[selectSkill][3] < 2){
+				do{
+					if(target < Arr_Length_Side(targetSide)){
+						target ++
+					}else{
+						target = 0
+					}
+				}until(isUp(targetSide, target) or (targetSide == 0))
 			}
 		}else{// select through actions
 			do{
@@ -27,11 +39,15 @@ function Player_Control(){
 	}
 	
 	if(keyboard_check_pressed(global.keyLeft)){
-		if(selectLevel > 0){// select through targets
-			if(target > 0){
-				target --
-			}else{
-				target = Arr_Length_Side(targetSide)
+		if(selectLevel > 0 ){// select through targets
+			if(Active[selectSkill][3] < 2){
+				do{
+					if(target > 0){
+						target --
+					}else{
+						target = Arr_Length_Side(targetSide)
+					}
+				}until(isUp(targetSide, target) or (targetSide == 0))
 			}
 		}else{// select through actions
 			do{
@@ -53,7 +69,11 @@ function Player_Control(){
 	}
 	
 	if(keyboard_check_pressed(global.confirm)){// confirm action
-		targetSide = getSide(Side, Active[selectSkill][3])
+		if(Active[selectSkill][3] < 2)
+			targetSide = getSide(Side, Active[selectSkill][3])
+		else
+			targetSide = getSide(Side, 1)
+		
 		selectLevel ++
 		if(selectLevel > 1){
 			if(CMP >= (MMP * Active[selectSkill][4])){
@@ -69,10 +89,14 @@ function Player_Control(){
 			if(Side == targetSide){
 				target = insInd
 			}else{
-				if(lastTarg < Arr_Length_Side(targetSide))
+				if(lastTarg < Arr_Length_Side(targetSide) and isUp(targetSide, target)){
 					target = lastTarg
-				else
+				}else{
 					target = 0
+					while(!isUp(targetSide, target)){
+						target ++
+					}
+				}
 			}
 		}
 		

@@ -6,6 +6,7 @@ function Multi_Bash(targ, side){
 	ins.target = BattleController_obj.entities[side][targ]
 	ins.base += (ATK / amt)
 	ins.hits = amt
+	ins.hitChance += SKL
 	
 	
 	doTurn = false

@@ -15,26 +15,27 @@ function Init_Rob(){
 	var pre = []
 	var post = []
 	var act = []
-	act = [Basic_Bash_I(), Heal_Low_I(), "", "", "", "", "", Multi_Bash_I(), "", "", ""]
+	act = [Basic_Bash_I(), Heal_Low_I(), DEF_up_I(), "", "", "", "", "", "", "", ""]
 	var react = []
 	react[0] = Endure
 	var oth = []
 	
+	arr[20] = 2
 	arr[19] = Player_Control	// control
 	arr[0] = "Robbie"	// name
 	arr[1] = 8		// xp
-	arr[2] = 120	// mhp
-	arr[3] = 120	// chp
-	arr[4] = 10		// mmp
-	arr[5] = 10		// mcp
+	arr[2] = 250	// mhp
+	arr[3] = 250	// chp
+	arr[4] = 100	// mmp
+	arr[5] = 100	// mcp
 	
-	arr[6] = 30		// atk
-	arr[7] = 30		// def
-	arr[8] = 1		// mag
+	arr[6] = 35		// atk
+	arr[7] = 50		// def
+	arr[8] = 35		// mag
 	arr[9] = 25		// agi
-	arr[10] = 20	// skl
-	arr[11] = 15	// spd
-	arr[12] = 40	// lck
+	arr[10] = 40	// skl
+	arr[11] = 30	// spd
+	arr[12] = 45	// lck
 	
 	arr[13] = RES	// res
 	

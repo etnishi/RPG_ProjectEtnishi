@@ -15,26 +15,27 @@ function Init_Olly(){
 	var pre = []
 	var post = []
 	var act = []
-	act = [Basic_Bash_I(), "", "", "", "", "", "", "", "", "", ""]
+	act = [Basic_Bash_I(), Hit_All_I(), "", "", "", "", "", "", "", "", ""]
 	var react = []
 	react[0] = Endure
 	var oth = []
 	
+	arr[20] = 0
 	arr[19] = Player_Control	// control
 	arr[0] = "Oliver"	// name
 	arr[1] = 8		// xp
-	arr[2] = 100	// mhp
-	arr[3] = 100	// chp
-	arr[4] = 1		// mmp
-	arr[5] = 1		// mcp
+	arr[2] = 120	// mhp
+	arr[3] = 120	// chp
+	arr[4] = 100	// mmp
+	arr[5] = 100	// mcp
 	
-	arr[6] = 30		// atk
-	arr[7] = 40		// def
-	arr[8] = 1		// mag
-	arr[9] = 25		// agi
-	arr[10] = 20	// skl
-	arr[11] = 15	// spd
-	arr[12] = 40	// lck
+	arr[6] = 35		// atk
+	arr[7] = 25		// def
+	arr[8] = 40		// mag
+	arr[9] = 50		// agi
+	arr[10] = 45	// skl
+	arr[11] = 35	// spd
+	arr[12] = 30	// lck
 	
 	arr[13] = RES	// res
 	

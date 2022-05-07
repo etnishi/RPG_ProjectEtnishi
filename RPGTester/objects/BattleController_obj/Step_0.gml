@@ -12,15 +12,18 @@ if(init){
 	// ally and enemy sprites should have the same width.
 	var yoff = room_height
 	var sep = 128
-	var xoffA = ((array_length(entities[0]) - 1)/ 2) * sep
-	for(var i = 0; i < array_length(entities[0]); i++){
-		entities[0][i].x = xoff + (i * sep) - xoffA
-		entities[0][i].y = yoff - 120
-	}
+	
 	var xoffE = ((array_length(entities[1]) - 1) / 2) * sep
 	for(var i = 0; i < array_length(entities[1]); i++){
 		entities[1][i].x = xoff + (i * sep) - xoffE
 		entities[1][i].y = yoff / 2
+	}
+	
+	xoff += 128
+	var xoffA = ((array_length(entities[0]) - 1)/ 2) * sep
+	for(var i = 0; i < array_length(entities[0]); i++){
+		entities[0][i].x = xoff + (i * sep) - xoffA
+		entities[0][i].y = yoff - 120
 	}
 	for(var o = 0; o < 2; o ++){
 		for(var i = 0; i < array_length(entities[o]); i ++){
@@ -40,7 +43,7 @@ if(init){
 		
 		if(turnStart){
 			turnStart = false
-			array_push(notificationLines, "Turn " + string(turnCounter)+ " Start")
+			// array_push(notificationLines, "Turn " + string(turnCounter)+ " Start")
 			with(entities[sideInd][turnInd]){
 				Pre_Script()
 				doTurn = true
@@ -54,7 +57,11 @@ if(init){
 			}
 		}else{
 			with(entities[sideInd][turnInd]){
-				controlType()
+				if(Status[3] == 0 and Status[4] == 0){
+					controlType()
+				}else{
+					doTurn = false
+				}
 				// execute entity control script
 			}
 		}
@@ -96,11 +103,11 @@ if(init){
 						}else{
 							entities[0][i].EXP += xp
 						}
-						array_push(notificationLines, msg + string(xp) + " EXP ")
 						global_update(o, entities[0][i])
 					}
 				}
 			}
+			array_push(notificationLines, "You gain " + string(loot[0]) + " EXP ")
 		}else if(team_check(entities[0])){
 			// if ally team is down
 			done = true

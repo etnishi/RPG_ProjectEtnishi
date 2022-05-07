@@ -9,6 +9,7 @@ if(cooldown == 0){
 		ins.target = target
 		ins.base = base
 		ins.eType = eType
+		ins.hitChance = hitChance
 	}else{
 		instance_destroy()
 	}

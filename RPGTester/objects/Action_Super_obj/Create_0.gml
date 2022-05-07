@@ -3,6 +3,11 @@
 
 target = ""
 
-spd = 10
+spd = 30
 
 spr = ""
+
+countdown = 0
+frameCount = 0
+
+init = true

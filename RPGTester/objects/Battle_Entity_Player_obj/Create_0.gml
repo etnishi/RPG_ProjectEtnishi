@@ -3,7 +3,7 @@
 
 event_inherited()
 
-insName = "Player_Bob"// default name
+insName = "Player_"// default name
 
 controlType = Player_Control// player input control
 
@@ -12,3 +12,5 @@ Side = 0// ally side
 targetSide = 1// default target is opposite of Side
 
 subSelect = 0// sub menu selection index (obsolete) 
+
+playerIcon = ""

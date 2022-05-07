@@ -13,9 +13,9 @@ lootDrops = []
 
 approach = " Attacks"
 
-changeRate = 1
+changeRate = 2
 
-thinkArr = []
+thinkArr = [10, 10]
 /*
 The think arr contains weight values for targetting
 

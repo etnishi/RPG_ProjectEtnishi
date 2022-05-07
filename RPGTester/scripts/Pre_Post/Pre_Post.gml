@@ -53,6 +53,7 @@ function Pre_Script(){
 	if(Status[3] > 0){// skips turn
 		Status[3] --
 	}
+	val = 0
 }
 function Post_Script(){
 	// all post turn scripts

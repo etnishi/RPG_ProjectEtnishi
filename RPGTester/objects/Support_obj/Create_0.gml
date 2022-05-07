@@ -5,6 +5,8 @@ event_inherited()
 
 scr = Do_Heal
 
-type = [1, 0, 0, 0, 0, 0]
+etype = [1, 0, 0, 0, 0, 0]
 
 base = 10
+
+spr = Sup1_Spr

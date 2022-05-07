@@ -39,7 +39,8 @@ function do_col(col_Object){
 			tvspd ++
 		}
 	}
-
+	
 	hspeed = thspd * sgnh
 	vspeed = tvspd * sgnv
+	
 }

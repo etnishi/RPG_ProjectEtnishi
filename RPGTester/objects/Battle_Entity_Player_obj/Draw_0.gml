@@ -1,7 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_self()
+switch(role){
+	case(0):
+		draw_sprite_ext(sprite_index, 0, x, y, 1, 1, 0, c_aqua, 1)
+		break
+	case(1):
+		draw_sprite_ext(sprite_index, 0, x, y, 1, 1, 0, c_red, 1)
+		break
+	case(2):
+		draw_sprite_ext(sprite_index, 0, x, y, 1, 1, 0, c_blue, 1)
+		break
+	case(3):
+		draw_sprite_ext(sprite_index, 0, x, y, 1, 1, 0, c_green, 1)
+		break
+}
 
 if(doTurn){
 	var xoffA = 64
@@ -24,6 +37,11 @@ if(doTurn){
 			}
 		}
 	}
+	
+	if(playerIcon != ""){
+		
+	}
 }
+
 
 event_inherited()

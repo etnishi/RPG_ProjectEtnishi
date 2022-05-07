@@ -4,10 +4,14 @@ function Heal_Low(targ, side){
 	var ins = instance_create_layer(x, y, "Attack_Layer", Support_obj)
 	ins.target = BattleController_obj.entities[side][targ]
 	ins.base += MAG
+	var tnam = " themselves"
+	if(targ != self)
+		tnam = BattleController_obj.entities[side][targ].insName
+	array_push(BattleController_obj.notificationLines, string( insName + " Heals ") + tnam)
 	doTurn = false
 }
 
 function Heal_Low_I(){
-	return ["Heal", "TEST HEAL", Heal_Low, 1, 0.5]
+	return ["Heal", "TEST HEAL", Heal_Low, 1, 0.1]
 }
 

@@ -8,6 +8,17 @@ if(firstStep){
 	}
 }
 
+if(movStep > 0){
+	movStep --
+}else{
+	movStep = frameSpd / mSpeed
+	if(movFrame == 2){
+		movFrame = 0
+	}else{
+		movFrame = 2
+	}
+}
+
 if(secondTimer > 0){
 	secondTimer --
 }else{

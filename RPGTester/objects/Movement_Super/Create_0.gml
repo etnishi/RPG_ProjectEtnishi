@@ -6,9 +6,16 @@ firstStep = true
 mSpeed = 5
 // base movement speed value
 
+frameSpd = 50
+
+movStep = frameSpd / mSpeed
+
+movFrame = 0
+
+curDir = 0
+
 secondTimer = 60
 // timer for events that happen once per second
-
 
 xMid = sprite_width  / 2
 yMid = sprite_height / 2

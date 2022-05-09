@@ -38,7 +38,6 @@ global.Recall[3] = Overworld
 global.Recall[4] = global.flags
 
 
-//room_goto(Overworld)
 var dArr = [["Testing 1 2 3", ""], 
 	["This is a test RPG system that I am working on", ""], 
 	["The purpose of this is to practice working with GameMaker", ""],
@@ -47,7 +46,10 @@ var dArr = [["Testing 1 2 3", ""],
 	["Tilesets by Clockwork Raven Studios, clockworkraven.itch.io", ""], 
 	["starting the game ", StartGame]]
 
-Start_Dialog(dArr, "Instances")
+
+room_goto(Overworld)
+
+//Start_Dialog(dArr, "Instances")
 
 
 

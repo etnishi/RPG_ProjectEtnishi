@@ -12,3 +12,5 @@ y = global.Recall[2]
 active = 0
 
 control = 0
+
+spr = Player_Tester_Import

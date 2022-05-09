@@ -36,6 +36,7 @@ global.Recall[1] = 100
 global.Recall[2] = 100
 global.Recall[3] = Overworld
 global.Recall[4] = global.flags
+global.Recall[5] = true
 
 
 var dArr = [["Testing 1 2 3", ""], 
@@ -43,7 +44,8 @@ var dArr = [["Testing 1 2 3", ""],
 	["The purpose of this is to practice working with GameMaker", ""],
 	["I may develop this into something more someday...", ""], 
 	["'Silver' Font by poppyworks, poppyworks.itch.io", ""], 
-	["Tilesets by Clockwork Raven Studios, clockworkraven.itch.io", ""], 
+	["Tilesets by Clockwork Raven Studios, clockworkraven.itch.io", ""],
+	["Characters by Pipoya, pipoya.itch.io", ""], 
 	["starting the game ", StartGame]]
 
 

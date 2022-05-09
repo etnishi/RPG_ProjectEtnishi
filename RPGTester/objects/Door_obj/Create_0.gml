@@ -5,4 +5,4 @@ targRoom = ""
 targx = 0
 targy = 0
 
-
+cooldown = 10

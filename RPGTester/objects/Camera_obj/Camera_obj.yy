@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "Follower_spr",
-    "path": "sprites/Follower_spr/Follower_spr.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "Movement_Super",
-    "path": "objects/Movement_Super/Movement_Super.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -26,16 +20,15 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Movement_Entities",
-    "path": "folders/Objects/Movement_Entities.yy",
+    "name": "Camera",
+    "path": "folders/Objects/Movement_Entities/Camera.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Follower_Move_obj",
+  "name": "Camera_obj",
   "tags": [],
   "resourceType": "GMObject",
 }

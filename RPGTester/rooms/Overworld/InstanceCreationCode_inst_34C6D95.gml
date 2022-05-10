@@ -1,3 +1,3 @@
 targRoom = Interior
-targx = 100
-targy = 100
+targx = 3535
+targy = 2079

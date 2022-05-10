@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2c0b8fac-07fa-45db-ac6f-63429a0557e7","path":"sprites/Enemy_SPR/Enemy_SPR.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2c0b8fac-07fa-45db-ac6f-63429a0557e7","path":"sprites/Enemy_SPR/Enemy_SPR.yy",},"LayerId":{"name":"22eb43b2-554e-431b-8ae9-9b550ef5a4a3","path":"sprites/Enemy_SPR/Enemy_SPR.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"Enemy_SPR","path":"sprites/Enemy_SPR/Enemy_SPR.yy",},"resourceVersion":"1.0","name":"2c0b8fac-07fa-45db-ac6f-63429a0557e7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a015fd53-4a34-4061-b3b6-bc80250ddb5a","path":"sprites/Follower_spr/Follower_spr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a015fd53-4a34-4061-b3b6-bc80250ddb5a","path":"sprites/Follower_spr/Follower_spr.yy",},"LayerId":{"name":"d4d7dd05-9aac-4864-8a5a-7479c439c489","path":"sprites/Follower_spr/Follower_spr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"Follower_spr","path":"sprites/Follower_spr/Follower_spr.yy",},"resourceVersion":"1.0","name":"a015fd53-4a34-4061-b3b6-bc80250ddb5a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"Enemy_SPR","path":"sprites/Enemy_SPR/Enemy_SPR.yy",},
+    "spriteId": {"name":"Follower_spr","path":"sprites/Follower_spr/Follower_spr.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5e2d5f99-fea4-4b95-8c50-613fc7d83582","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2c0b8fac-07fa-45db-ac6f-63429a0557e7","path":"sprites/Enemy_SPR/Enemy_SPR.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"971618f3-7493-403f-a54b-7e46a3cd73b8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a015fd53-4a34-4061-b3b6-bc80250ddb5a","path":"sprites/Follower_spr/Follower_spr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,22 +58,22 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"Enemy_SPR","path":"sprites/Enemy_SPR/Enemy_SPR.yy",},
+    "parent": {"name":"Follower_spr","path":"sprites/Follower_spr/Follower_spr.yy",},
     "resourceVersion": "1.4",
-    "name": "Enemy_SPR",
+    "name": "Follower_spr",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"22eb43b2-554e-431b-8ae9-9b550ef5a4a3","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d4d7dd05-9aac-4864-8a5a-7479c439c489","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "RPGTester",
+    "path": "RPGTester.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "Enemy_SPR",
+  "name": "Follower_spr",
   "tags": [],
   "resourceType": "GMSprite",
 }

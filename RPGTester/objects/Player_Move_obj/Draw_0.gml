@@ -17,17 +17,7 @@ if(active <= 0){
 		}else if(In_Range(direction, 270, 46)){
 			curDir = 0
 		}
-		/*
-		if(direction == 0){
-			curDir = 6
-		}else if(direction == 90){
-			curDir = 9
-		}else if(direction == 180){
-			curDir = 3
-		}else if(direction == 270){
-			curDir = 0
-		}
-		*/
+		
 		draw_sprite(spr, curDir + movFrame, x, y)
 		// animated movement
 	}else{
@@ -39,3 +29,15 @@ if(active <= 0){
 	
 	draw_text(x,y,string(heightCur))
 }
+
+/*
+if(direction == 0){
+	curDir = 6
+}else if(direction == 90){
+	curDir = 9
+}else if(direction == 180){
+	curDir = 3
+}else if(direction == 270){
+	curDir = 0
+}
+*/

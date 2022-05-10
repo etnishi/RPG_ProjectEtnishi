@@ -14,5 +14,6 @@ targ = ""
 
 targIns = ""
 
+spr = SkeletonInRobe
 
 event_inherited()

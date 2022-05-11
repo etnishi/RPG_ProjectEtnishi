@@ -28,7 +28,6 @@ if(secondTimer > 0){
 // countdown for one second timer. one second ~ 60 frames
 
 var ins = instance_place(x,y,Elevate_super)
-
 if(ins){
 	if(abs(ins.targHeight - heightCur) <= 1){
 		heightCur = ins.targHeight

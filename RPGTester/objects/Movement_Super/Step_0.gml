@@ -6,6 +6,7 @@ if(firstStep){
 	if(hi){
 		heightLevel = hi.heightLevel
 	}
+	firstStep = false
 }
 
 if(movStep > 0){

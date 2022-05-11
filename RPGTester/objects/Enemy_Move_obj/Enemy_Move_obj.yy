@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Enemy_SPR",
-    "path": "sprites/Enemy_SPR/Enemy_SPR.yy",
+    "name": "Hitbox_Red_spr",
+    "path": "sprites/Hitbox_Red_spr/Hitbox_Red_spr.yy",
   },
   "solid": false,
   "visible": true,

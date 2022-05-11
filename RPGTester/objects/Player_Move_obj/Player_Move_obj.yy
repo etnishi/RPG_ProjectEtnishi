@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite6",
-    "path": "sprites/Sprite6/Sprite6.yy",
+    "name": "Hitbox_spr",
+    "path": "sprites/Hitbox_spr/Hitbox_spr.yy",
   },
   "solid": false,
   "visible": true,

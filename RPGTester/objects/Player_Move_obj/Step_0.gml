@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
 if(active <= 0){
 	if(control <= 0){
 		if(keyboard_check(global.keyRight)){

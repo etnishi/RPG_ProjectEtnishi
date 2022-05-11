@@ -1,3 +1,3 @@
 targRoom = Overworld
-targx = 2624
+targx = 2656
 targy = 600

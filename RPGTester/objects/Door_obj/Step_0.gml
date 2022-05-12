@@ -5,7 +5,7 @@
 if(global.Recall[5]){
 	Player_Move_obj.x = global.Recall[1]
 	Player_Move_obj.y = global.Recall[2]
-	global.Recall[5] = false
+	
 }else{
 	if(place_meeting(x, y, Player_Move_obj)){
 		if(cooldown){

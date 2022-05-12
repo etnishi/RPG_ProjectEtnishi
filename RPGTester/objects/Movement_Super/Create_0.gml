@@ -3,6 +3,8 @@
 
 firstStep = true
 
+doCollision = true
+
 mSpeed = 5
 // base movement speed value
 
@@ -28,26 +30,26 @@ function do_col(col_Object){
 	var sgnh = sign(hspeed)
 	var sgnv = sign(vspeed)
 	// snapshot of current movement speed
-	
-	for(var i = 1; i < abs(hspeed); i ++){
-		var ins = instance_place(x + (i * sgnh), y, col_Object)
-		if(!ins){
-			thspd ++
-		}else if(ins.heightLevel != -1 and ins.heightLevel != heightLevel){
-			thspd ++
+	if(doCollision){
+		for(var i = 1; i < abs(hspeed); i ++){
+			var ins = instance_place(x + (i * sgnh), y, col_Object)
+			if(!ins){
+				thspd ++
+			}else if(ins.heightLevel != -1 and ins.heightLevel != heightLevel){
+				thspd ++
+			}
 		}
-	}
 
-	for(var i = 1; i < abs(vspeed); i ++){
-		var ins = instance_place(x, y + (i * sgnv), col_Object)
-		if(!ins){
-			tvspd ++
-		}else if(ins.heightLevel != -1 and ins.heightLevel != heightLevel){
-			tvspd ++
+		for(var i = 1; i < abs(vspeed); i ++){
+			var ins = instance_place(x, y + (i * sgnv), col_Object)
+			if(!ins){
+				tvspd ++
+			}else if(ins.heightLevel != -1 and ins.heightLevel != heightLevel){
+				tvspd ++
+			}
 		}
+	
+		hspeed = thspd * sgnh
+		vspeed = tvspd * sgnv
 	}
-	
-	hspeed = thspd * sgnh
-	vspeed = tvspd * sgnv
-	
 }

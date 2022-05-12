@@ -5,7 +5,7 @@ function Charge_Bash(targ, side){
 	ins.target = BattleController_obj.entities[side][targ]
 	ins.base = 40 + ATK
 	ins.chargeAct = CB_
-	ins.hitChance += (SKL * 1.5) + (LCK / 2)
+	ins.hitChance += 20 + (SKL * 1.5) + (LCK / 2)
 	
 	array_push(BattleController_obj.notificationLines, string( insName + " starts charging"))
 	doTurn = false

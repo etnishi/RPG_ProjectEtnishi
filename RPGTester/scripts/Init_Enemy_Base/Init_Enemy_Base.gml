@@ -19,6 +19,9 @@ function Init_Enemy(){
 	var react = []
 	var oth = []
 	
+	arr[21] = SkeletonInRobe
+	//	Character sprite import
+	
 	arr[20] = 4
 	arr[19] = Random_Control	// control
 	arr[0] = "Tester Enemy"	// name

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Follower_spr",
-    "path": "sprites/Follower_spr/Follower_spr.yy",
+    "name": "Hitbox_spr",
+    "path": "sprites/Hitbox_spr/Hitbox_spr.yy",
   },
   "solid": false,
   "visible": true,

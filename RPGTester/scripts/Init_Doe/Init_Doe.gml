@@ -20,6 +20,9 @@ function Init_Doe(){
 	react[0] = Endure
 	var oth = []
 	
+	arr[21] = Character_3
+	//	Character sprite import
+	
 	arr[20] = 1
 	arr[19] = Player_Control	// control
 	arr[0] = "J.Doe"	// name

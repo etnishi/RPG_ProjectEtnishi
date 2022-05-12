@@ -15,16 +15,20 @@ switch(role){
 		draw_sprite_ext(sprite_index, 0, x, y, 1, 1, 0, c_green, 1)
 		break
 }
-
-if(doTurn){
+if(!doTurn){
+	draw_sprite(playerIcon, 1, x + 32, y - 32)
+}else{
+	if(playerIcon != ""){
+		draw_sprite(playerIcon, 1, x + 32, y - 46)
+	}
 	var xoffA = 64
 	var yoffA = 32
 	if(selectLevel > 0){// draws target marker
 	
 		if(targetSide == 0){
-			draw_sprite(TargetArrow_spr, 0, BattleController_obj.entities[0][target].x, BattleController_obj.entities[0][target].y - 42)
+			draw_sprite(TargetArrow_spr, 0, BattleController_obj.entities[0][target].x, BattleController_obj.entities[0][target].y + 42)
 		}else{
-			draw_sprite(TargetArrow_spr, 0, BattleController_obj.entities[1][target].x, BattleController_obj.entities[1][target].y - 42)
+			draw_sprite(TargetArrow_spr, 0, BattleController_obj.entities[1][target].x, BattleController_obj.entities[1][target].y + 42)
 		}
 		draw_text_color(xoffA, yoffA, Active[selectSkill][1], c_white, c_white, c_white, c_white, 1)
 	}else{
@@ -38,9 +42,6 @@ if(doTurn){
 		}
 	}
 	
-	if(playerIcon != ""){
-		
-	}
 }
 
 

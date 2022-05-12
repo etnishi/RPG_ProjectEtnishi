@@ -20,6 +20,9 @@ function Init_Olly(){
 	react[0] = Endure
 	var oth = []
 	
+	arr[21] = Player_Tester_Import
+	//	Character sprite import
+	
 	arr[20] = 0
 	arr[19] = Player_Control	// control
 	arr[0] = "Oliver"	// name

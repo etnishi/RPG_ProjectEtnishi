@@ -9,6 +9,8 @@ insInd = 0
 
 val = 0
 
+playerIcon = ""
+
 initStep = true
 
 target = 0

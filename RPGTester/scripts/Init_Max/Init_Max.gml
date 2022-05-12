@@ -20,6 +20,9 @@ function Init_Max(){
 	react[0] = Endure
 	var oth = []
 	
+	arr[21] = Character_3
+	//	Character sprite import
+	
 	arr[20] = 3
 	arr[19] = Player_Control	// control
 	arr[0] = "Max"	// name

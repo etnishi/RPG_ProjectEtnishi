@@ -20,6 +20,9 @@ function Init_Rob(){
 	react[0] = Endure
 	var oth = []
 	
+	arr[21] = Character_2
+	//	Character sprite import
+	
 	arr[20] = 2
 	arr[19] = Player_Control	// control
 	arr[0] = "Robbie"	// name

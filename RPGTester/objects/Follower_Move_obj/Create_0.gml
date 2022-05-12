@@ -3,4 +3,6 @@
 
 following = ""
 
+spr = Character_2
+
 event_inherited()

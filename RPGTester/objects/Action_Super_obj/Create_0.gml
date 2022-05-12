@@ -7,9 +7,9 @@ spd = 30
 
 spr = ""
 
-base = 20
+base = 0
 
-hitChance = 30
+hitChance = 0
 
 countdown = 0
 frameCount = 0

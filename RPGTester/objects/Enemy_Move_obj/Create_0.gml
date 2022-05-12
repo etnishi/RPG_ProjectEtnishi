@@ -14,6 +14,6 @@ targ = ""
 
 targIns = ""
 
-spr = SkeletonInRobe
+spr = Skeleton_Basic
 
 event_inherited()

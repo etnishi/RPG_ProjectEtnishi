@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+draw_self()
 if(speed > 0){
 	if(In_Range(direction, 0, 45)){
 		curDir = 6

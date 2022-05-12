@@ -11,5 +11,6 @@ function DEF_up(targ, side){
 }
 
 function DEF_up_I(){
-	return ["DEF up", "Description", DEF_up, 2, 0.2]
+	return ["DEF up", "Description", DEF_up, 2, 0.2, 1, 0, false]
+//		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg
 }

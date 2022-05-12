@@ -10,7 +10,8 @@ function Basic_Bash(targ, side){
 }
 
 function Basic_Bash_I(){
-	return ["Bash", "Description", Basic_Bash, 0, 0]
+	return ["Bash", "Description", Basic_Bash, 0, 0, 30, 60, false]
+//		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg
 }
 
 

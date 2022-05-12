@@ -9,5 +9,5 @@ function Do_Nothing(targ, side){
 }
 
 function Do_Nothing_I(){
-	return ["Nothing", "X does Nothing", Do_Nothing, 1]
+	return ["Nothing", "X does Nothing", Do_Nothing, 1, -1, -1, false]
 }

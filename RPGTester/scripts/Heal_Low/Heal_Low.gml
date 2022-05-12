@@ -12,6 +12,7 @@ function Heal_Low(targ, side){
 }
 
 function Heal_Low_I(){
-	return ["Heal", "TEST HEAL", Heal_Low, 1, 0.1]
+	return ["Heal", "TEST HEAL", Heal_Low, 1, 0.1, 1, 0, false]
+//		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg
 }
 

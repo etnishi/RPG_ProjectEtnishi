@@ -23,7 +23,7 @@ function Init_Enemy(){
 	//	Character sprite import
 	
 	arr[20] = 4
-	arr[19] = Random_Control	// control
+	arr[19] = Weight_Control	// control
 	arr[0] = "Tester Enemy"	// name
 	arr[1] = 8		// xp
 	arr[2] = 90	// mhp

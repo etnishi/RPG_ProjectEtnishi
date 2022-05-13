@@ -4,8 +4,8 @@ function Basic_Bash(targ, side){
 	var ins = instance_create_layer(x, y, "Attack_Layer",  Attack_obj)
 	array_push(BattleController_obj.notificationLines, string( insName + " does a Basic Bash"))
 	ins.target = BattleController_obj.entities[side][targ]
-	ins.base += ATK
-	ins.hitChance += (SKL * 1.5) + (LCK / 2)
+	ins.base = 30 + ATK
+	ins.hitChance = 60 + (SKL * 1.5) + (LCK / 2)
 	doTurn = false
 }
 

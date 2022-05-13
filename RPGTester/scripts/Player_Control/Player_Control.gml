@@ -18,7 +18,7 @@ function Player_Control(){
 	
 	if(keyboard_check_pressed(global.keyRight)){
 		if(selectLevel > 0){// select through targets
-			if(Active[selectSkill][3] < 2){
+			if(Active[selectSkill][3] < 2){// this determines if the ability can target others or only self
 				do{
 					if(target < Arr_Length_Side(targetSide)){
 						target ++
@@ -40,7 +40,7 @@ function Player_Control(){
 	
 	if(keyboard_check_pressed(global.keyLeft)){
 		if(selectLevel > 0 ){// select through targets
-			if(Active[selectSkill][3] < 2){
+			if(Active[selectSkill][3] < 2){// this determines if the ability can target others or only self
 				do{
 					if(target > 0){
 						target --
@@ -62,6 +62,7 @@ function Player_Control(){
 	
 	if(keyboard_check_pressed(global.keyUp)){
 		// todo: show more information?
+		doDetail = !doDetail
 	}
 	
 	if(keyboard_check_pressed(global.keyDown)){

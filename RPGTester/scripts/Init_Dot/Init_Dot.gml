@@ -20,7 +20,7 @@ function Init_Dot(){
 	react[0] = Endure
 	var oth = []
 	
-	arr[21] = Character_3
+	arr[21] = Character_4
 	//	Character sprite import
 	
 	arr[20] = 3

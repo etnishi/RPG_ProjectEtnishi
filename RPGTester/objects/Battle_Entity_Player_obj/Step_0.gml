@@ -5,6 +5,13 @@
 //	target
 //	targetSide
 
+if(selectLevel == 0){
+	targetSide = Side
+	target = insInd
+	var lvtmp = checkLevel
+	checkLevel = 2
+}
+
 if(doDetail){
 	Deets[0] = BattleController_obj.entities[targetSide][target].insName
 	
@@ -37,6 +44,10 @@ if(doDetail){
 		Deets[3] = "???"
 		Deets[4] = ["???", "???", "???", "???"]
 	}
+}
+
+if(selectLevel == 0){
+	checkLevel = lvtmp
 }
 
 event_inherited()

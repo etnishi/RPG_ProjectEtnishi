@@ -6,6 +6,7 @@ function Player_Control(){
 		selectLevel = 0
 		subSelect = 0
 		selectSkill = 0
+		doDetail = false
 		if(lastTarg < Arr_Length_Side(targetSide) and isUp(targetSide, target)){
 			target = lastTarg
 		}else{
@@ -67,6 +68,7 @@ function Player_Control(){
 	
 	if(keyboard_check_pressed(global.keyDown)){
 		// swap target side?
+		doDetail = !doDetail
 	}
 	
 	if(keyboard_check_pressed(global.confirm)){// confirm action

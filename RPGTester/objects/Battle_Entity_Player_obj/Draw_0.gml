@@ -54,7 +54,26 @@ if(!doTurn){
 			}
 		}
 	}
-	
+	if(doDetail and selectLevel == 0){
+		
+		var yoffD = 100
+		var sepD = 20
+		var xoffD = 120
+		var gxof = 0
+		if(selectLevel == 0){
+			gxof -= 40
+			yoffD += 20
+		}
+		
+		for(var i = 0; i < 4; i ++){
+			draw_text(BattleController_obj.entities[targetSide][target].x + gxof, BattleController_obj.entities[targetSide][target].y - yoffD + (sepD * i), string(Deets[i]))
+		}
+		for(var i = 0; i < array_length(Deets[4]); i ++){
+			draw_text(BattleController_obj.entities[targetSide][target].x + xoffD + gxof, BattleController_obj.entities[targetSide][target].y - yoffD + (sepD * i), string(Deets[4][i]))
+		}
+		draw_text(BattleController_obj.entities[targetSide][target].x + gxof, BattleController_obj.entities[targetSide][target].y - yoffD - (sepD), string("Stats"))
+		draw_text(BattleController_obj.entities[targetSide][target].x + xoffD + gxof, BattleController_obj.entities[targetSide][target].y - yoffD - (sepD), string("Resistances"))
+	}
 }
 
 

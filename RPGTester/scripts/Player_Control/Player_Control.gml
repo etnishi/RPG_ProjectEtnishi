@@ -66,9 +66,26 @@ function Player_Control(){
 		doDetail = !doDetail
 	}
 	
-	if(keyboard_check_pressed(global.keyDown)){
-		// swap target side?
-		doDetail = !doDetail
+	if(keyboard_check(global.keyDown)){
+		//	
+		if(BattleController_obj.canRun and BattleController_obj.runTry){
+			runCharge ++
+			show_debug_message("Run charge " + string(runCharge))
+			if(runCharge > 90){
+				show_debug_message("Tried to run")
+				BattleController_obj.runTry = false
+				var run = irandom_range(0, 100)
+				if(run < BattleController_obj.runVal){
+					show_debug_message("Good")
+					with(BattleController_obj){
+						fight_end()
+						room_goto(global.lastRoom)
+					}
+				}
+			}
+		}
+	}else{
+		runCharge = 0
 	}
 	
 	if(keyboard_check_pressed(global.confirm)){// confirm action

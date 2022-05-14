@@ -78,11 +78,13 @@ if(init){
 		}
 		
 		if(turnInd >= array_length(entities[sideInd])){
+			runTry = true
 			turnInd = 0
 			sideInd ++
 			if(sideInd >= array_length(entities)){
 				sideInd = 0
 			}
+			// switch to other side
 		}
 		
 		if(team_check(entities[1])){
@@ -90,23 +92,7 @@ if(init){
 			done = true
 			win = true
 			array_push(notificationLines, "Battle Over")
-			for(var i = 0; i < array_length(entities[0]); i ++){
-				for(var o = 0; o < array_length(global.Player_Team); o ++){
-					if(global.Player_Team[o][0] == entities[0][i].insName){
-						var xp = loot[0]
-						var msg = entities[0][i].insName + " Gains "
-						if(entities[0][i].EXP < global.Team_Exp){
-							xp = xp * (global.Team_Exp / entities[0][i].EXP)
-							entities[0][i].EXP += xp
-							msg += "Bonus "
-							// bonus catch up EXP 
-						}else{
-							entities[0][i].EXP += xp
-						}
-						global_update(o, entities[0][i])
-					}
-				}
-			}
+			fight_end()
 			array_push(notificationLines, "You gain " + string(loot[0]) + " EXP ")
 		}else if(team_check(entities[0])){
 			// if ally team is down

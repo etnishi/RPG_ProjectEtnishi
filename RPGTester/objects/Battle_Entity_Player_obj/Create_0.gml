@@ -15,9 +15,10 @@ subSelect = 0// sub menu selection index (obsolete)
 
 playerIcon = ""
 
-doDetail = true
+doDetail = false
 checkLevel = 0
 Deets = ["", 0, 0, "", []]
 //		[name, hp, mp, role, weakness]
 //levels 0,   1,   1,  2,    2
 
+runCharge = 0

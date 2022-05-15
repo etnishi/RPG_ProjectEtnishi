@@ -57,6 +57,9 @@ function Pre_Script(){
 }
 function Post_Script(){
 	// all post turn scripts
+	if(Status[5] > 0){// taunt status
+		Status[5] --// countdown for agro up duration 
+	}
 	for(var i = 0; i < array_length(PostTurn); i ++){
 		PostTurn[i]()
 	}

@@ -39,9 +39,12 @@ if(doDetail){
 				Deets[3] = "HLR"
 				break
 		}
-		Deets[4] = BattleController_obj.entities[targetSide][target].RES
 	}else{
 		Deets[3] = "???"
+	}
+	if(checkLevel > 2){
+		Deets[4] = BattleController_obj.entities[targetSide][target].RES
+	}else{
 		Deets[4] = ["???", "???", "???", "???"]
 	}
 }

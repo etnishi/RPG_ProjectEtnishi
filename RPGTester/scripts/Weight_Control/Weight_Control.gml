@@ -38,6 +38,9 @@ function Weight_Control(){
 			weights[0][i] = -10
 			// if down sets weight to negative 
 		}
+		if(BattleController_obj.entities[side][i].Status[5] > 0){
+			weights[0][i] += 3	// agro bonus from taunt status
+		}
 	}
 	for(var i = array_length(BattleController_obj.entities[1]) - 1; i >= 0; i --){
 		var side = 1

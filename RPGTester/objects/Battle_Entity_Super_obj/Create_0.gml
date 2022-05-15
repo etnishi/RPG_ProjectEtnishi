@@ -76,7 +76,7 @@ Status[1] = 0	// stunned, may not act for X turns
 Status[2] = 0	// Fire,	taking damage each turn
 Status[3] = 0	// stop,	can't act for X turns, also counts as down. (temporary down)
 Status[4] = 0	// down,	can't act until healed, if all members are down battle ends.(Can not be -1)
-Status[5] = 0	// 
+Status[5] = 0	// Agro boost.	does nothing but increases agro drawn.
 Status[6] = 0	// 
 // status effect resistance is determined by LCK stat
 

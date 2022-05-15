@@ -66,6 +66,10 @@ function Player_Control(){
 		doDetail = !doDetail
 	}
 	
+	if(keyboard_check_pressed(global.keyDown)){
+		
+	}
+	
 	if(keyboard_check(global.keyDown)){
 		//	
 		if(BattleController_obj.canRun and BattleController_obj.runTry){
@@ -109,7 +113,7 @@ function Player_Control(){
 			if(Side == targetSide){
 				target = insInd
 			}else{
-				if(lastTarg < Arr_Length_Side(targetSide) and isUp(targetSide, target)){
+				if(lastTarg < Arr_Length_Side(targetSide) and isUp(targetSide, lastTarg)){
 					target = lastTarg
 				}else{
 					target = 0

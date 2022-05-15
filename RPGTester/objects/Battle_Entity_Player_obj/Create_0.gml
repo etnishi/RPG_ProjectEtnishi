@@ -19,6 +19,6 @@ doDetail = false
 checkLevel = 0
 Deets = ["", 0, 0, "", []]
 //		[name, hp, mp, role, weakness]
-//levels 0,   1,   1,  2,    2
+//levels 0,   1,   1,  2,    3
 
 runCharge = 0

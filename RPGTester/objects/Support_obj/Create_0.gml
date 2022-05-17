@@ -9,4 +9,4 @@ etype = [1, 0, 0, 0, 0, 0]
 
 base = 10
 
-spr = Sup1_Spr
+spr = HexShield_spr

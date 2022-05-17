@@ -7,6 +7,7 @@ function Agro_up(targ, side){
 	ins.etype = 0.5
 	ins.base = 1
 	ins.scr = Do_Agro
+	ins.spr = HexShield_spr
 	doTurn = false
 }
 

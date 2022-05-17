@@ -11,9 +11,9 @@ draw_text_color(x, y + 32, string(TargetHP), c_white, c_white, c_white, c_white,
 
 // health and magic bars
 var hPer = CHP / MHP
-draw_bar(x + 2, y + 2, 60, 10, hPer, true)
+draw_bar(x + 2, y + 2, hPer, Bar_Colour_spr, true)
 
 var mPer = CMP / MMP
-draw_bar(x + 2, y + 16, 60, 10, mPer, false)
+draw_bar(x + 2, y + 16, mPer, Bar_Colour2_spr, false)
 
 

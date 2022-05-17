@@ -1,21 +1,22 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function draw_bar(xpos, ypos, len, wid, val, pal){
+function draw_bar(xpos, ypos, val, pal, typ){
+	var gscale = 1.5
 	
+	val = val * gscale
 	if(val >= 0){
-		var color = [c_green, c_purple]
-		if(pal){
-			color = [c_aqua, c_orange]
-		}
-	
-		draw_rectangle_color(xpos, ypos, xpos + len, ypos + wid, c_black, c_black, c_black, c_black, false)
+		
+		draw_sprite_ext(pal, 0, xpos, ypos, val, gscale, 0, c_white, 0.8)
 	
 		if(val > 1){
 			val --
-			draw_rectangle_color(xpos, ypos, xpos + (len * val), ypos + wid, color[1], color[1], color[1], color[1], false)
+			draw_sprite_ext(pal, 0, xpos, ypos, val, gscale, 0, c_white, 0.8)
 		}
-	
-		draw_rectangle_color(xpos, ypos, xpos + (len * val), ypos + wid, color[0], color[0], color[0], color[0], false)
+		if(typ){
+			draw_sprite_ext(Bar_Outline_spr, 0, xpos, ypos, gscale, gscale, 0, c_white, 1)
+		}else{
+			draw_sprite_ext(Bar_Outline2_spr, 0, xpos, ypos, gscale, gscale, 0, c_white, 1)
+		}	
 	}
 }
 

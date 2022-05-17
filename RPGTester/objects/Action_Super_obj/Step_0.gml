@@ -5,22 +5,25 @@ if(init){
 	init = false
 	if(instance_exists(target)){
 		var s = distance_to_object(target)
-		spd = s / spd
+		if(spr == ""){
+			spd = s / spd
+			spr = Sprite2
+		}else
+			spd = s / sprite_get_number(spr)
+		
 	}
-	countdown = floor(spd)
 }else{
-	countdown --
-	if(countdown < 0){
-		countdown = floor(spd)
-		frameCount ++
-	}
+	frameCount ++
 }
+
 
 if(instance_exists(target)){
 	move_towards_point(target.x, target.y, spd)
 	
-	if(instance_place(x, y, target)){
-		instance_destroy()
+	if(distance_to_object(target) <= 0){
+		if(frameCount >= sprite_get_number(spr)){
+			instance_destroy()
+		}
 	}
 }else{
 	instance_destroy()

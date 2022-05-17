@@ -9,7 +9,7 @@ if(selectLevel == 0){
 	targetSide = Side
 	target = insInd
 	var lvtmp = checkLevel
-	checkLevel = 2
+	checkLevel = 3
 }
 
 if(doDetail){

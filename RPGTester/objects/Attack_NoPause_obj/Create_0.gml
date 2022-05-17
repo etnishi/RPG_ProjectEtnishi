@@ -3,5 +3,3 @@
 
 event_inherited()
 
-eType = [1, 0, 0, 0, 0, 0]
-

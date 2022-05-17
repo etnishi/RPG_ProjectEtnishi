@@ -19,7 +19,7 @@ function Init_Enemy(){
 	var react = []
 	var oth = []
 	
-	arr[21] = SkeletonInRobe
+	arr[21] = Skeleton_Basic
 	//	Character sprite import
 	
 	arr[20] = 4

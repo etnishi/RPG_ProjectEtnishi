@@ -7,6 +7,7 @@ function Magic_Bash(targ, side){
 	ins.base = 30 + MAG
 	ins.hitChance = 60 + (SKL * 1.5) + (LCK / 2)
 	ins.eType = [0 ,0 ,0 , 0, 1, 0]
+	ins.spr = Nebula_spr
 	doTurn = false
 }
 

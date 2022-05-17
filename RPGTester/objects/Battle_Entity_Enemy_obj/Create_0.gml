@@ -3,6 +3,8 @@
 
 event_inherited()
 
+playerIcon = Skeleton_Basic_Battle_spr
+
 controlType = Random_Control// default control type for generic enemies is random choice
 
 Side = false// false is enemy side

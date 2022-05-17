@@ -4,5 +4,9 @@
 event_inherited()
 
 if(spr != ""){
-	draw_sprite(spr, frameCount, x, y)
+	if(onTarg){
+		draw_sprite(spr, frameCount, target.x + (target.sprite_width/2), target.y + (target.sprite_height/2))
+	}else{
+		draw_sprite(spr, frameCount, x, y)
+	}
 }

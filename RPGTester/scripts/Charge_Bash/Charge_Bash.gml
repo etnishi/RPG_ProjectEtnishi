@@ -6,6 +6,7 @@ function Charge_Bash(targ, side){
 	ins.base = 40 + ATK
 	ins.chargeAct = CB_
 	ins.hitChance = 60 + (SKL * 1.5) + (LCK / 2)
+	ins.spr = GreenBlob_spr
 	
 	array_push(BattleController_obj.notificationLines, string( insName + " starts charging"))
 	doTurn = false

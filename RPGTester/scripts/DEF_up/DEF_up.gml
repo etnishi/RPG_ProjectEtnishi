@@ -7,6 +7,7 @@ function DEF_up(targ, side){
 	ins.etype = 0.5
 	ins.base = 1
 	ins.scr = Do_Buff
+	ins.spr = HexShield_spr
 	doTurn = false
 }
 

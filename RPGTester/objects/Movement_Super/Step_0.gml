@@ -7,6 +7,7 @@ if(firstStep){
 		heightLevel = hi.heightLevel
 	}
 	firstStep = false
+	playerIcon = Skeleton_Basic
 }
 
 if(movStep > 0){

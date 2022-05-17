@@ -4,6 +4,7 @@ function Heal_Low(targ, side){
 	var ins = instance_create_layer(x, y, "Attack_Layer", Support_obj)
 	ins.target = BattleController_obj.entities[side][targ]
 	ins.base += MAG
+	ins.scr = Do_Heal
 	ins.spr = Magic_spr
 	var tnam = " themselves"
 	if(targ != self)

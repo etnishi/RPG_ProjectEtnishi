@@ -5,4 +5,5 @@ function Do_Heal(target, base, bonus){
 	target.TargetHP += amount
 	if(target.TargetHP > target.MHP)
 		target.TargetHP = target.MHP
+	show_debug_message("Heal")
 }

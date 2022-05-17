@@ -3,6 +3,10 @@
 
 draw_self()
 
+if(playerIcon != ""){
+	draw_sprite(playerIcon, 0, x, y)
+}
+
 if(selectLevel > 0){
 	
 	if(targetSide){

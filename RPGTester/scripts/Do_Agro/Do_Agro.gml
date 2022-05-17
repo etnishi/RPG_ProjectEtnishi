@@ -1,5 +1,5 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Do_Agro(target, statInd, bonus){
-	target.Status[5] = 2
+	target.Status[5] = 3
 }

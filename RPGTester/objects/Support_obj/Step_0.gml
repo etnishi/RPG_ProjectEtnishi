@@ -3,8 +3,8 @@
 
 event_inherited()
 
-if(frameCount >= sprite_get_number(spr)){
-	if(instance_place(x, y, target)){
+if(frameCount >= sprite_get_number(spr)-1){
+	if(distance_to_object(target) <= 0){
 		scr(target, base, etype)
 	}
 }

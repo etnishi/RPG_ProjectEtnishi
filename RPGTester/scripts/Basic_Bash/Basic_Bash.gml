@@ -6,6 +6,8 @@ function Basic_Bash(targ, side){
 	ins.target = BattleController_obj.entities[side][targ]
 	ins.base = 30 + ATK
 	ins.hitChance = 60 + (SKL * 1.5) + (LCK / 2)
+	ins.spr = Hit_spr
+	ins.onTarg = true
 	doTurn = false
 }
 

@@ -3,25 +3,25 @@
 function Do_Buff(target, statInd, bonus){
 	switch(statInd){
 		case 0:
-			target.ATK += bonus
+			target.ATK += target.ATK * bonus
 			break
 		case 1:
-			target.DEF += bonus
+			target.DEF += target.DEF * bonus
 			break
 		case 2:
-			target.MAG += bonus
+			target.MAG += target.MAG * bonus
 			break
 		case 3:
-			target.AGI += bonus
+			target.AGI += target.AGI * bonus
 			break
 		case 4:
-			target.SKL += bonus
+			target.SKL += target.SKL * bonus
 			break
 		case 5:
-			target.SPD += bonus
+			target.SPD += target.SPD * bonus
 			break
 		case 6:
-			target.LCK += bonus
+			target.LCK += target.LCK * bonus
 			break
 	}
 }

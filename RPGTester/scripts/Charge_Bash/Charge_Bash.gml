@@ -13,7 +13,7 @@ function Charge_Bash(targ, side){
 }
 
 function Charge_Bash_I(){
-	return ["Charge Bash", "Description", Charge_Bash, 0, 0, 40, 60, false]
+	return ["Charge Bash", "Description", Charge_Bash, 0, 0, 40, 60, false, 1, 0]
 //		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg
 }
 

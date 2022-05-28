@@ -15,7 +15,7 @@ function All_Bash(){
 }
 
 function All_Bash_I(){
-	return ["Bash All", "Description", All_Bash, 0, 0, 10, 50, true]
+	return ["Bash All", "Description", All_Bash, 0, 0, 10, 50, true, 3, 0]
 }
 
 

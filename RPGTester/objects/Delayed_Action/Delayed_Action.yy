@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Action_Entities",
-    "path": "folders/Objects/Action_Entities.yy",
+    "name": "ActionSpawners",
+    "path": "folders/Objects/Action_Entities/ActionSpawners.yy",
   },
   "resourceVersion": "1.0",
   "name": "Delayed_Action",

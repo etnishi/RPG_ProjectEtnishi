@@ -12,6 +12,6 @@ function Agro_up(targ, side){
 }
 
 function Agro_up_I(){
-	return ["Agro up", "Description", Agro_up, 2, 0.2, 1, 0, false]
+	return ["Agro up", "Description", Agro_up, 2, 0.2, 1, 0, false, 3, 0]
 //		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg
 }

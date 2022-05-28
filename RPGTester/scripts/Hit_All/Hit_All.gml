@@ -15,7 +15,7 @@ function Hit_All(targ, side){
 }
 
 function Hit_All_I(){
-	return ["Bash All", "Description", Hit_All, 0, 0, 10, 50, true]
+	return ["Bash All", "Description", Hit_All, 0, 0, 10, 50, true, 4, 0]
 }
 
 

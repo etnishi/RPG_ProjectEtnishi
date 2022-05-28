@@ -3,3 +3,8 @@
 
 event_inherited()
 
+frame ++
+if(frame > frameSpeed){
+	image_index = irandom(sprite_index)
+	frame = 0
+}

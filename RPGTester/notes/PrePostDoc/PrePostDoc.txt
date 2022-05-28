@@ -1,0 +1,18 @@
+
+
+These are the pre and post scripts for the battle entity.
+These are executed in the scope of the Battle_Entity_Super_obj environment.
+
+These scripts all follow the standard format of " ScriptX() " with no arguments and no returns.
+
+These scripts can modify a battle entity's stat variables 
+STR
+DEF
+MAG
+SKL
+AGI
+LCK
+
+and its Status array.
+
+

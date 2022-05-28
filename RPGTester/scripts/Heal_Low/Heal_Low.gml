@@ -3,7 +3,7 @@
 function Heal_Low(targ, side){
 	var ins = instance_create_layer(x, y, "Attack_Layer", Support_obj)
 	ins.target = BattleController_obj.entities[side][targ]
-	ins.base += MAG
+	ins.base = (MAG / 2) + 10
 	ins.scr = Do_Heal
 	ins.spr = Magic_spr
 	var tnam = " themselves"
@@ -14,7 +14,7 @@ function Heal_Low(targ, side){
 }
 
 function Heal_Low_I(){
-	return ["Heal", "TEST HEAL", Heal_Low, 1, 0.1, 1, 0, false]
-//		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg
+	return ["Heal", "TEST HEAL", Heal_Low, 1, 0, 1, 0, false, 0, 0]
+//		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg, cooldown
 }
 

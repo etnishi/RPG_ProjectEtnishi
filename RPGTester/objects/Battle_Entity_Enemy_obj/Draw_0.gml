@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_self()
+//draw_self()
 
 if(playerIcon != ""){
 	draw_sprite(playerIcon, 0, x, y)
@@ -16,4 +16,4 @@ if(selectLevel > 0){
 	}
 }
 
-event_inherited()
+//event_inherited()

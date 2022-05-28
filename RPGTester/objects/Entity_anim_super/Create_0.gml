@@ -3,7 +3,6 @@
 
 event_inherited()
 
-//
-if(sprite_index != -1){
-	image_speed = 0.4
-}
+frameSpeed = 5
+frame = 0
+image_speed = 0

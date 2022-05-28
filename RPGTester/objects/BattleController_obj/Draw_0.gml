@@ -12,3 +12,5 @@ for(var i = 0; i < 8; i ++){// fetch the last 8 strings in the notification line
 		draw_text_color(xoff, yoff - (spaceing * i), notificationLines[ind], c_white, c_white, c_white, c_white, 1)
 	}
 }
+
+

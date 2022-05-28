@@ -12,8 +12,8 @@ function Magic_Bash(targ, side){
 }
 
 function Magic_Bash_I(){
-	return ["Magic", "Description", Magic_Bash, 0, 0, 30, 60, false]
-//		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg
+	return ["Magic", "Description", Magic_Bash, 0, 0, 30, 60, false, 0, 0]
+//		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg, cooldown
 }
 
 

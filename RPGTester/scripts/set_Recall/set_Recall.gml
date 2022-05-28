@@ -13,6 +13,8 @@ function return_Recall(){
 	global.Player_Team = global.Recall[0]
 	Player_Move_obj.x = global.Recall[1]
 	Player_Move_obj.y = global.Recall[2]
-	room_goto(global.Recall[3])
+	if(room != global.Recall[3] && global.Recall[3] != ""){
+		room_goto(global.Recall[3])
+	}
 	global.flags = global.Recall[4]
 }

@@ -13,8 +13,8 @@ function Multi_Bash(targ, side){
 }
 
 function Multi_Bash_I(){
-	return ["Bash", "Description", Multi_Bash, 0, 0.3, 20, 60, false]
-//		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg
+	return ["Bash", "Description", Multi_Bash, 0, 0.3, 20, 60, false, 2, 0]
+//		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg, cooldown
 }
 
 

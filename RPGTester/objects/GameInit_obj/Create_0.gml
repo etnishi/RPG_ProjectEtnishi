@@ -42,10 +42,10 @@ global.Recall[5] = true
 var dArr = [["Testing 1 2 3", ""], 
 	["This is a test RPG system that I am working on", ""], 
 	["The purpose of this is to practice working with GameMaker", ""],
-	["I may develop this into something more someday...", ""], 
+	["I may develop this into something more someday", ""], 
 	["'Silver' Font by poppyworks, poppyworks.itch.io", ""], 
 	["Tilesets by Clockwork Raven Studios, clockworkraven.itch.io", ""],
-	["Characters by Pipoya, pipoya.itch.io", ""], 
+	["Characters and Enemies by Pipoya, pipoya.itch.io", ""], 
 	["starting the game ", StartGame]]
 
 

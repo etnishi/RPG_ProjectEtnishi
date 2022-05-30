@@ -6,7 +6,7 @@
     "path": "folders/Scripts/ActionScripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "SingleTarget",
+  "name": "SingleTargetSupport",
   "tags": [],
   "resourceType": "GMScript",
 }

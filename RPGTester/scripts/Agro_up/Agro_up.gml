@@ -12,6 +12,8 @@ function Agro_up(targ, side){
 }
 
 function Agro_up_I(){
-	return ["Agro up", "Description", Agro_up, 2, 0.2, 1, 0, false, 3, 0]
+	return ["Agro up", "Description", Do_Agro, 2, SingleTargetSupport, 0.2, 30, 0.5, 1000, 0, Ring_Expand_spr, false]
 //		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg
+//	arr	format
+//	Name,	Description,	Script,	TargetSide,	TargType	MP Cost,	base,	etype	HitRate,	cooldown,	sprite
 }

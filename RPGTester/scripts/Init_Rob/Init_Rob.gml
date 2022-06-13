@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Init_Rob(){
 	var arr = []
-	
+
 	var RES = []	// resistance stats 
 	// these are multiplied against the DEF modifier 
 	RES[5]	= 0		// Unblockable this stat will always be 0
@@ -15,7 +15,7 @@ function Init_Rob(){
 	var pre = []
 	var post = []
 	var act = []
-	act = [Basic_Bash_I(), Agro_up_I(), DEF_up_I(), "", "", "", "", "", "", "", ""]
+	act = [Basic_Bash_I(), Agro_up_I(), "", "", "", "", "", "", "", "", ""]
 	var react = []
 	react[0] = Endure
 	var oth = []

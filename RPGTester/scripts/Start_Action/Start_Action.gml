@@ -6,17 +6,17 @@ Name,	Description,	Script,	TargetSide,	TargType	MP Cost,	base,	type	HitRate,	coo
 ex: ["name", "Desc", ]
 */
 
-function Start_Action(targ, arr){
+function Start_Action(targ, side, arr){
 	
-	var acts = arr[4](targ)
+	var acts = arr[4](targ, side)
 	
 	for(var i = 0; i < array_length(acts); i ++){
-		acts.target = targ
-		acts.scr = arr[2]
-		acts.base = arr[6] + getMod(arr[7])
-		acts.etype = arr[7]
-		acts.hitChance = arr[8] + (SKL * 1.5) + (LCK / 2)
-		acts.spr = arr[10]
+		acts[i].scr = arr[2]
+		acts[i].base = arr[6] + getMod(arr[7])
+		acts[i].etype = arr[7]
+		acts[i].hitChance = arr[8] + (SKL * 1.5) + (LCK / 2)
+		acts[i].spr = arr[10]
+		acts[i].onTarg = arr[11]
 	}
 	doTurn = false
 }

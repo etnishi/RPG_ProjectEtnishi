@@ -11,9 +11,12 @@ function Basic_Bash(targ, side){
 	doTurn = false
 }
 
-function Basic_Bash_I(){
-	return ["Bash", "Description", Basic_Bash, 0, 0, 30, 60, false, 0, 0]
+// old format
 //		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg
+function Basic_Bash_I(){
+	return ["Bash", "Description", Do_Damage, 0, SingleTargetAttack, 0, 30, [1,0,0,0,0,0], 60, 0, Hit_spr, true]
+//	arr	format
+//	Name,	Description,	Script,	TargetSide,	TargType	MP Cost,	base,	etype	HitRate,	cooldown,	sprite
 }
 
 

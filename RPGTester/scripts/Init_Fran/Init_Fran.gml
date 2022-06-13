@@ -15,7 +15,7 @@ function Init_Fran(){
 	var pre = []
 	var post = []
 	var act = []
-	act = [Basic_Bash_I(), Charge_Bash_I(), "", "", "", "", "", Multi_Bash_I(), "", "", ""]
+	act = [Basic_Bash_I(), "", "", "", "", "", "", "", "", "", ""]
 	var react = []
 	react[0] = Endure
 	var oth = []

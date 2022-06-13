@@ -42,10 +42,10 @@ function Weight_Control(){
 			weights[0][i] += 3	// agro bonus from taunt status
 		}
 	}
-	for(var i = array_length(BattleController_obj.entities[1]) - 1; i >= 0; i --){
+	for(var i = (array_length(BattleController_obj.entities[1]) - 1); i >= 0; i --){
 		var side = 1
 		weights[1][i] = 0
-		var hPer = BattleController_obj.entities[side][i].CHP / BattleController_obj.entities[0][i].MHP
+		var hPer = BattleController_obj.entities[side][i].CHP / BattleController_obj.entities[side][i].MHP
 		if(hPer < 0.4){
 			weights[1][i] += 5
 		}
@@ -93,20 +93,29 @@ function Weight_Control(){
 		if(weights[0][atkTarg] < weights[1][supTarg] or support){
 			// choose support action
 			if(Active[i][3] == 1){
-				
+				actWeight ++
 			}
 		}else{
-			// choose attack action
+			/* choose attack action
+			arr	format
+Name,	Description,	Script,	TargetSide,	TargType	MP Cost,	base,	type	HitRate,	cooldown,	sprite
+0		1				2		3			4			5			6		7		8			9			10
+ex: ["name", "Desc", ]
+*/
 			if(Active[i][3] == 0){
 				var tempW = 0
-				if(Active[select][5] < Active[actWeight][5]){
-					tempW ++
-				}
 				if(Active[select][6] < Active[actWeight][6]){
 					tempW ++
 				}
-				if(targAll and Active[i][7]){
+				if(Active[select][8] < Active[actWeight][8]){
 					tempW ++
+				}
+				for(var t = 0; t < array_length(Active[actWeight][7]); t ++){
+					if(Active[actWeight][7][t] > BattleController_obj.entities[0][targ].RES[t]){
+						if(((Active[actWeight][7][t] - targ.RES[t])) > 0){
+							tempW += (Active[actWeight][7][t] - targ.RES[t])
+						}
+					}
 				}
 				if(tempW > actWeight){
 					actWeight = tempW
@@ -126,5 +135,5 @@ function Weight_Control(){
 	}
 	
 	
-	Active[select][2](targ, 0)
+	Start_Action(targ, 0, Active[select])
 }

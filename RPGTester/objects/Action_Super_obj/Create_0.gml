@@ -10,6 +10,7 @@ spr = ""
 base = 0
 
 hitChance = 0
+onTarg = false
 
 countdown = 0
 frameCount = 0

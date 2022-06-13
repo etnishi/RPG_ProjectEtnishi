@@ -12,7 +12,7 @@ function Magic_Bash(targ, side){
 }
 
 function Magic_Bash_I(){
-	return ["Magic", "Description", Magic_Bash, 0, 0, 30, 60, false, 0, 0]
+	return ["Bash", "Description", Do_Damage, 0, SingleTargetAttack, 0, 30, [0,0,0,0,1,0], 70, 0, Magic_spr, false]
 //		Name,	Description,	Script,	TargetSide,	MP Cost,	base,	Hitbase,	alltarg, cooldown
 }
 

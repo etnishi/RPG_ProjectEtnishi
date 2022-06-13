@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Actions",
-    "path": "folders/Scripts/ActionScripts/Actions.yy",
+    "name": "toFix",
+    "path": "folders/Scripts/ActionScripts/Actions/toFix.yy",
   },
   "resourceVersion": "1.0",
   "name": "Heal_All",

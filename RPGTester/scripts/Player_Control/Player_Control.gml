@@ -100,9 +100,9 @@ function Player_Control(){
 		
 		selectLevel ++
 		if(selectLevel > 1){
-			if(CMP >= (MMP * Active[selectSkill][4])){
-				CMP -= (MMP * Active[selectSkill][4])
-				Active[selectSkill][2](target, targetSide)
+			if(CMP >= (MMP * Active[selectSkill][5])){
+				CMP -= (MMP * Active[selectSkill][5])
+				Start_Action(target, targetSide, Active[selectSkill])
 				lastTarg = target
 				selectLevel = 0
 				targetSide = 1
